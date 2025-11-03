@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Jose Aristizabal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1773cf",
+              "background-light": "#f6f7f8",
+              "background-dark": "#111921",
+              "corporate-blue": "#0078D4",
+              "neutral-light-gray": "#F3F2F1",
+              "neutral-dark-gray": "#605E5C",
+              "accent-green": "#107C10",
+              "text-light": "#111418",
+              "text-dark": "#f3f4f6",
+              "border-light": "#dce0e5",
+              "border-dark": "#374151"
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden antialiased">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-neutral-light-gray dark:border-border-dark">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<!-- Placeholder for a menu icon if needed -->
+</div>
+<h1 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">JA</h1>
+<div class="flex w-12 items-center justify-end">
+<!-- Placeholder for an action icon if needed -->
+</div>
+</header>
+<main class="flex-1 px-4 py-6">
+<div class="max-w-md mx-auto">
+<!-- Availability Chip -->
+<div class="flex justify-start mb-8">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-accent-green/10 px-4 py-1">
+<div class="w-2 h-2 rounded-full bg-accent-green"></div>
+<p class="text-accent-green text-sm font-medium leading-normal">Available for Remote Projects</p>
+</div>
+</div>
+<!-- Contact Form Section -->
+<div>
+<!-- Section Header -->
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Get in Touch</h2>
+<form class="space-y-4">
+<!-- Name TextField -->
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-neutral-dark-gray dark:text-gray-300 text-base font-medium leading-normal pb-2">Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-corporate-blue/50 border border-border-light dark:border-border-dark bg-white dark:bg-background-dark h-14 placeholder:text-neutral-dark-gray/70 dark:placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" placeholder="Enter your name" value=""/>
+</label>
+<!-- Email TextField -->
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-neutral-dark-gray dark:text-gray-300 text-base font-medium leading-normal pb-2">Email</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-corporate-blue/50 border border-border-light dark:border-border-dark bg-white dark:bg-background-dark h-14 placeholder:text-neutral-dark-gray/70 dark:placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" placeholder="Enter your email address" type="email" value=""/>
+</label>
+<!-- Message TextArea -->
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-neutral-dark-gray dark:text-gray-300 text-base font-medium leading-normal pb-2">Message</p>
+<textarea class="form-textarea flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-corporate-blue/50 border border-border-light dark:border-border-dark bg-white dark:bg-background-dark h-32 placeholder:text-neutral-dark-gray/70 dark:placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" placeholder="Your message here..."></textarea>
+</label>
+<!-- Send Message Button -->
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 bg-corporate-blue text-white gap-2 text-base font-bold leading-normal tracking-[0.015em]" type="submit">Send Message</button>
+</form>
+</div>
+<!-- Direct Contact Section -->
+<div class="mt-12">
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5">Or Reach Me Directly</h2>
+<div class="space-y-3">
+<!-- Email Link -->
+<a class="flex items-center p-3 rounded-lg hover:bg-neutral-light-gray dark:hover:bg-white/10 transition-colors" href="mailto:jmaristizabalg@hotmail.com">
+<span class="material-symbols-outlined text-neutral-dark-gray dark:text-gray-300 mr-4">mail</span>
+<span class="text-text-light dark:text-text-dark text-base font-medium">jmaristizabalg@hotmail.com</span>
+</a>
+<!-- Phone Link -->
+<a class="flex items-center p-3 rounded-lg hover:bg-neutral-light-gray dark:hover:bg-white/10 transition-colors" href="tel:+573186787404">
+<span class="material-symbols-outlined text-neutral-dark-gray dark:text-gray-300 mr-4">call</span>
+<span class="text-text-light dark:text-text-dark text-base font-medium">+57 318 678 7404</span>
+</a>
+<!-- LinkedIn Link -->
+<a class="flex items-center p-3 rounded-lg hover:bg-neutral-light-gray dark:hover:bg-white/10 transition-colors" href="https://linkedin.com/in/jmaristizabalg" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-6 h-6 text-neutral-dark-gray dark:text-gray-300 mr-4" fill="currentColor" viewbox="0 0 24 24">
+<path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-2.13-1.82-2.13a1.91 1.91 0 00-1.68.96c-.18.33-.22.79-.22 1.25V19h-3V10h3v1.32h.04c.4-.77 1.38-1.57 3.2-1.57 3.42 0 4 2.62 4 6.02V19z"></path>
+</svg>
+<span class="text-text-light dark:text-text-dark text-base font-medium">linkedin.com/in/jmaristizabalg</span>
+</a>
+</div>
+</div>
+<!-- CV Download Section -->
+<div class="mt-12">
+<a class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 bg-transparent dark:bg-white/10 text-corporate-blue dark:text-white border-2 border-corporate-blue dark:border-white/20 gap-2 text-base font-bold leading-normal tracking-[0.015em] hover:bg-corporate-blue/10 dark:hover:bg-white/20 transition-colors" href="#">
+<span class="material-symbols-outlined">download</span>
+                        Download CV (PDF)
+                    </a>
+</div>
+</div>
+</main>
+</div>
+</body></html>
