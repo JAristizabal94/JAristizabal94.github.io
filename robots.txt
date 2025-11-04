@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jaristizabal94.github.io/sitemap.xml
+
+# Disallow admin/temp directories if any
+Disallow: /assets/documents/
+Disallow: /_site/
+Disallow: /vendor/
