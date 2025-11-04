@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+
+  <!-- SEO Tags -->
+  {% seo %}
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0078D4",
+            "accent-green": "#107C10",
+            "text-dark-gray": "#333333",
+            "background-light": "#F4F4F4",
+            "background-dark": "#111921",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    /* Syntax highlighting */
+    .highlight {
+      background: #f6f8fa;
+      border-radius: 6px;
+      padding: 16px;
+      overflow-x: auto;
+    }
+
+    .dark .highlight {
+      background: #161b22;
+    }
+
+    /* Blog content styling */
+    .blog-content h2 {
+      @apply text-2xl font-bold mt-8 mb-4 text-text-dark-gray dark:text-gray-100;
+    }
+
+    .blog-content h3 {
+      @apply text-xl font-bold mt-6 mb-3 text-text-dark-gray dark:text-gray-100;
+    }
+
+    .blog-content p {
+      @apply mb-4 text-gray-700 dark:text-gray-300 leading-relaxed;
+    }
+
+    .blog-content ul, .blog-content ol {
+      @apply mb-4 ml-6 text-gray-700 dark:text-gray-300;
+    }
+
+    .blog-content li {
+      @apply mb-2;
+    }
+
+    .blog-content code {
+      @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-sm;
+    }
+
+    .blog-content pre code {
+      @apply bg-transparent p-0;
+    }
+
+    .blog-content a {
+      @apply text-primary hover:underline;
+    }
+
+    .blog-content blockquote {
+      @apply border-l-4 border-primary pl-4 italic my-4 text-gray-600 dark:text-gray-400;
+    }
+
+    .blog-content img {
+      @apply rounded-lg my-6 shadow-md;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    {% include header.html %}
+
+    <main class="flex-grow">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+  </div>
+</body>
+</html>

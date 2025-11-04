@@ -1,0 +1,55 @@
+<div class="flex flex-col h-full rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow group">
+  <a href="{{ include.post.url }}" class="block">
+    {% if include.post.image %}
+    <div class="h-48 overflow-hidden">
+      <img src="{{ include.post.image }}" alt="{{ include.post.title }}"
+           class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+    </div>
+    {% else %}
+    <div class="h-48 bg-gradient-to-br from-primary/20 to-accent-green/20 flex items-center justify-center">
+      <span class="material-symbols-outlined text-primary text-6xl">article</span>
+    </div>
+    {% endif %}
+  </a>
+
+  <div class="flex flex-col gap-3 p-6 flex-grow">
+    <!-- Categories -->
+    {% if include.post.categories %}
+    <div class="flex flex-wrap gap-2">
+      {% for category in include.post.categories limit:2 %}
+      <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">
+        {{ category }}
+      </span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Title -->
+    <a href="{{ include.post.url }}" class="block">
+      <h3 class="text-primary dark:text-blue-400 text-xl font-bold leading-tight group-hover:underline">
+        {{ include.post.title }}
+      </h3>
+    </a>
+
+    <!-- Excerpt -->
+    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-3 flex-grow">
+      {{ include.post.excerpt | strip_html | truncate: 150 }}
+    </p>
+
+    <!-- Meta Info -->
+    <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400 text-xs pt-4 border-t border-gray-200 dark:border-gray-700">
+      <div class="flex items-center gap-1">
+        <span class="material-symbols-outlined text-sm">calendar_today</span>
+        <time datetime="{{ include.post.date | date_to_xmlschema }}">
+          {{ include.post.date | date: "%b %d, %Y" }}
+        </time>
+      </div>
+      {% if include.post.read_time %}
+      <div class="flex items-center gap-1">
+        <span class="material-symbols-outlined text-sm">schedule</span>
+        <span>{{ include.post.read_time }} min</span>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

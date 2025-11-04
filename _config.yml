@@ -1,0 +1,63 @@
+# Site settings
+title: Jose Aristizabal
+description: Senior Microsoft Solutions Architect | Power Platform & Dynamics 365 Expert
+url: https://jaristizabal94.github.io
+baseurl: ""
+author:
+  name: Jose Aristizabal
+  email: contact@jaristizabal.dev
+  linkedin: jmaristizabalg
+  github: JAristizabal94
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+paginate: 9
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - README.md
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Kramdown settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Jose Aristizabal"
