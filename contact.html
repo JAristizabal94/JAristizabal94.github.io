@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contact - Jose Aristizabal</title>
+    <meta name="description" content="Get in touch with Jose Aristizabal for Microsoft Solutions Architecture projects"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0078D4",
+              "accent-green": "#107C10",
+              "text-dark-gray": "#333333",
+              "background-light": "#F4F4F4",
+              "background-dark": "#111921",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Navigation Header -->
+        <header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
+            <div class="flex items-center p-4 justify-between max-w-7xl mx-auto">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="w-1 h-12 bg-primary rounded-full"></div>
+                    <div>
+                        <h1 class="text-text-dark-gray dark:text-background-light text-xl font-black leading-tight group-hover:text-primary transition-colors">Jose Aristizabal</h1>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-tight">Solution Architect</p>
+                    </div>
+                </a>
+                <button id="menuBtn" aria-label="Open menu" class="text-text-dark-gray dark:text-background-light flex size-12 shrink-0 items-center justify-end">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <nav id="mobileMenu" class="hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+                <div class="flex flex-col p-4 space-y-2">
+                    <a href="index.html" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Home</a>
+                    <a href="index.html#about" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">About Me</a>
+                    <a href="index.html#expertise" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Technical Expertise</a>
+                    <a href="index.html#services" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Services</a>
+                    <a href="index.html#experience" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Experience</a>
+                    <a href="index.html#certifications" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Certifications</a>
+                    <a href="projects.html" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">All Projects</a>
+                    <a href="contact.html" class="py-2 px-4 bg-primary text-white rounded-lg">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex-grow">
+            <!-- Hero Section -->
+            <section class="px-4 py-12 max-w-4xl mx-auto text-center">
+                <h1 class="text-text-dark-gray dark:text-background-light text-[48px] font-black leading-tight">Get in Touch</h1>
+                <p class="text-gray-600 dark:text-gray-400 text-lg mt-4">Let's discuss how we can work together on your next project</p>
+
+                <!-- Availability Badge -->
+                <div class="flex justify-center mt-6">
+                    <div class="flex h-8 items-center justify-center gap-x-2 rounded-full bg-accent-green/10 px-4 py-1">
+                        <div class="w-2 h-2 rounded-full bg-accent-green"></div>
+                        <p class="text-accent-green text-sm font-medium leading-normal">Available for Remote Projects</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Content -->
+            <section class="px-4 py-8 max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Contact Form -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8 border border-gray-200 dark:border-gray-700">
+                        <h2 class="text-text-dark-gray dark:text-gray-100 text-2xl font-bold pb-6">Send a Message</h2>
+
+                        <form id="contactForm" action="https://formspree.io/f/mdkprlld" method="POST" class="space-y-6">
+                            <!-- Success Message -->
+                            <div id="successMessage" class="hidden bg-accent-green/10 border border-accent-green rounded-lg p-4 mb-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-accent-green text-2xl">check_circle</span>
+                                    <div>
+                                        <p class="text-accent-green font-bold">Message sent successfully!</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">I'll get back to you as soon as possible.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Error Message -->
+                            <div id="errorMessage" class="hidden bg-red-50 dark:bg-red-900/20 border border-red-300 dark:border-red-700 rounded-lg p-4 mb-4">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-red-600 text-2xl">error</span>
+                                    <div>
+                                        <p class="text-red-600 dark:text-red-400 font-bold">Oops! Something went wrong.</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">Please try again or contact me directly.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="name" class="block text-gray-600 dark:text-gray-300 text-base font-medium pb-2">Name *</label>
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    class="w-full rounded-lg text-text-dark-gray dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-14 px-4 text-base"
+                                    placeholder="Your full name"
+                                    required
+                                />
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-gray-600 dark:text-gray-300 text-base font-medium pb-2">Email *</label>
+                                <input
+                                    id="email"
+                                    name="_replyto"
+                                    type="email"
+                                    class="w-full rounded-lg text-text-dark-gray dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-14 px-4 text-base"
+                                    placeholder="your.email@example.com"
+                                    required
+                                />
+                            </div>
+
+                            <div>
+                                <label for="phone" class="block text-gray-600 dark:text-gray-300 text-base font-medium pb-2">Phone (Optional)</label>
+                                <input
+                                    id="phone"
+                                    name="phone"
+                                    type="tel"
+                                    class="w-full rounded-lg text-text-dark-gray dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-14 px-4 text-base"
+                                    placeholder="+1 (555) 000-0000"
+                                />
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-gray-600 dark:text-gray-300 text-base font-medium pb-2">Subject *</label>
+                                <input
+                                    id="subject"
+                                    name="_subject"
+                                    type="text"
+                                    class="w-full rounded-lg text-text-dark-gray dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-14 px-4 text-base"
+                                    placeholder="Project inquiry, consultation, etc."
+                                    required
+                                />
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-gray-600 dark:text-gray-300 text-base font-medium pb-2">Message *</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    class="w-full rounded-lg text-text-dark-gray dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 p-4 text-base resize-none"
+                                    placeholder="Tell me about your project or inquiry..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <!-- Honeypot for spam protection -->
+                            <input type="text" name="_gotcha" style="display:none" />
+
+                            <button
+                                type="submit"
+                                id="submitBtn"
+                                class="w-full h-14 bg-primary text-white font-bold rounded-lg hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2"
+                            >
+                                <span class="material-symbols-outlined">send</span>
+                                <span id="btnText">Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="space-y-6">
+                        <!-- Direct Contact -->
+                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8 border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-text-dark-gray dark:text-gray-100 text-2xl font-bold pb-6">Contact Information</h2>
+
+                            <div class="space-y-4">
+                                <a href="mailto:jmaristizabalg@hotmail.com" class="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group">
+                                    <div class="text-primary bg-primary/10 p-3 rounded-lg">
+                                        <span class="material-symbols-outlined text-2xl">mail</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">Email</p>
+                                        <p class="text-text-dark-gray dark:text-gray-100 font-medium group-hover:text-primary transition-colors">jmaristizabalg@hotmail.com</p>
+                                    </div>
+                                </a>
+
+                                <a href="tel:+573186787404" class="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group">
+                                    <div class="text-primary bg-primary/10 p-3 rounded-lg">
+                                        <span class="material-symbols-outlined text-2xl">call</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">Phone</p>
+                                        <p class="text-text-dark-gray dark:text-gray-100 font-medium group-hover:text-primary transition-colors">+57 318 678 7404</p>
+                                    </div>
+                                </a>
+
+                                <a href="https://linkedin.com/in/jmaristizabalg" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group">
+                                    <div class="text-primary bg-primary/10 p-3 rounded-lg">
+                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-2.13-1.82-2.13a1.91 1.91 0 00-1.68.96c-.18.33-.22.79-.22 1.25V19h-3V10h3v1.32h.04c.4-.77 1.38-1.57 3.2-1.57 3.42 0 4 2.62 4 6.02V19z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">LinkedIn</p>
+                                        <p class="text-text-dark-gray dark:text-gray-100 font-medium group-hover:text-primary transition-colors">linkedin.com/in/jmaristizabalg</p>
+                                    </div>
+                                </a>
+
+                                <div class="flex items-start gap-4 p-4 rounded-lg">
+                                    <div class="text-accent-green bg-accent-green/10 p-3 rounded-lg">
+                                        <span class="material-symbols-outlined text-2xl">location_on</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">Location</p>
+                                        <p class="text-text-dark-gray dark:text-gray-100 font-medium">Cali, Colombia</p>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">Open to remote work worldwide</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Schedule a Meeting -->
+                        <div class="bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl shadow-sm p-8 border border-primary/20">
+                            <div class="flex items-center gap-3 pb-3">
+                                <span class="material-symbols-outlined text-primary text-3xl">calendar_month</span>
+                                <h3 class="text-text-dark-gray dark:text-gray-100 text-xl font-bold">Schedule a Meeting</h3>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm pb-4">Book a free 30-minute consultation to discuss your project needs.</p>
+                            <a href="https://outlook.office.com/bookwithme/user/b90c5cb342884655b64c46feab49cab8@consultingservices365.com?anonymous&ismsaljsauthenabled&ep=plink" target="_blank" rel="noopener noreferrer" class="flex w-full items-center justify-center h-12 bg-primary text-white font-bold rounded-lg hover:bg-opacity-90 transition-colors gap-2">
+                                <span class="material-symbols-outlined">event</span>
+                                Book a Meeting
+                            </a>
+                        </div>
+
+                        <!-- Download CV -->
+                        <div class="bg-gradient-to-br from-accent-green/10 to-accent-green/5 rounded-xl shadow-sm p-8 border border-accent-green/20">
+                            <h3 class="text-text-dark-gray dark:text-gray-100 text-xl font-bold pb-3">Download My CV</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm pb-4">Get a detailed overview of my experience, skills, and certifications.</p>
+                            <a href="./assets/documents/CV-JMAG.pdf" download class="flex w-full items-center justify-center h-12 bg-accent-green text-white font-bold rounded-lg hover:bg-opacity-90 transition-colors gap-2">
+                                <span class="material-symbols-outlined">download</span>
+                                Download CV (PDF)
+                            </a>
+                        </div>
+
+                        <!-- Response Time -->
+                        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+                                <div>
+                                    <p class="text-text-dark-gray dark:text-gray-100 font-bold">Quick Response</p>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">I typically respond within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="px-4 py-16 max-w-4xl mx-auto">
+                <h2 class="text-text-dark-gray dark:text-gray-100 text-[32px] font-bold text-center pb-8">Frequently Asked Questions</h2>
+
+                <div class="space-y-4">
+                    <details class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 group">
+                        <summary class="flex cursor-pointer items-center justify-between list-none">
+                            <p class="text-text-dark-gray dark:text-gray-100 text-lg font-semibold">What services do you offer?</p>
+                            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
+                            I specialize in Microsoft Dynamics 365, Power Platform development, Azure solutions architecture, digital transformation consulting, and technical team leadership.
+                        </p>
+                    </details>
+
+                    <details class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 group">
+                        <summary class="flex cursor-pointer items-center justify-between list-none">
+                            <p class="text-text-dark-gray dark:text-gray-100 text-lg font-semibold">Do you work with clients remotely?</p>
+                            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
+                            Yes! I'm experienced in remote work and have successfully delivered projects for international clients across different time zones.
+                        </p>
+                    </details>
+
+                    <details class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 group">
+                        <summary class="flex cursor-pointer items-center justify-between list-none">
+                            <p class="text-text-dark-gray dark:text-gray-100 text-lg font-semibold">What's your typical project timeline?</p>
+                            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
+                            Project timelines vary depending on scope and complexity. After our initial consultation, I'll provide a detailed timeline and milestone breakdown.
+                        </p>
+                    </details>
+
+                    <details class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 group">
+                        <summary class="flex cursor-pointer items-center justify-between list-none">
+                            <p class="text-text-dark-gray dark:text-gray-100 text-lg font-semibold">What industries do you work with?</p>
+                            <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                        </summary>
+                        <p class="text-gray-600 dark:text-gray-400 mt-4 leading-relaxed">
+                            I have experience across banking, healthcare, retail, government, and more. My cross-industry expertise allows me to bring best practices from various sectors.
+                        </p>
+                    </details>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-6">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <p class="text-gray-500 dark:text-gray-400 text-sm">© 2024 Jose Aristizabal. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact Form Handler with Formspree
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Hide previous messages
+            successMessage.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+
+            // Update button state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending...';
+
+            try {
+                const formData = new FormData(form);
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Show success message
+                    successMessage.classList.remove('hidden');
+                    form.reset();
+
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    // Show error message
+                    errorMessage.classList.remove('hidden');
+                }
+            } catch (error) {
+                // Show error message
+                errorMessage.classList.remove('hidden');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.textContent = 'Send Message';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,704 +1,589 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Jose Aristizabal - Portfolio</title>
-    <meta name="description" content="Senior Microsoft Solutions Architect | Power Platform & Dynamics 365 Expert"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#0078D4",
-              "accent-green": "#107C10",
-              "text-dark-gray": "#333333",
-              "background-light": "#F4F4F4",
-              "background-dark": "#111921",
-            },
-            fontFamily: {
-              "display": ["Inter", "sans-serif"]
-            },
-            borderRadius: {
-              "DEFAULT": "0.25rem",
-              "lg": "0.5rem",
-              "xl": "0.75rem",
-              "full": "9999px"
-            },
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Jose Aristizabal - Portfolio</title>
+  <meta name="description" content="Senior Microsoft Solutions Architect | Power Platform & Dynamics 365 Expert" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0078D4",
+            "accent-green": "#107C10",
+            "text-dark-gray": "#333333",
+            "background-light": "#F4F4F4",
+            "background-dark": "#111921",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
           },
         },
-      }
-    </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-display">
-    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-        <!-- Navigation Header -->
-        <header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
-            <div class="flex items-center p-4 justify-between max-w-7xl mx-auto">
-                <span class="text-text-dark-gray dark:text-background-light text-xl font-bold">JA</span>
-                <button id="menuBtn" aria-label="Open menu" class="text-text-dark-gray dark:text-background-light flex size-12 shrink-0 items-center justify-end">
-                    <span class="material-symbols-outlined text-3xl">menu</span>
-                </button>
+  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <!-- Navigation Header -->
+    <header
+      class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
+      <div class="flex items-center p-4 justify-between max-w-7xl mx-auto">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-1 h-12 bg-primary rounded-full"></div>
+          <div>
+            <h1
+              class="text-text-dark-gray dark:text-background-light text-xl font-black leading-tight group-hover:text-primary transition-colors">
+              Jose Aristizabal</h1>
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-tight">Solution Architect</p>
+          </div>
+        </a>
+        <button id="menuBtn" aria-label="Open menu"
+          class="text-text-dark-gray dark:text-background-light flex size-12 shrink-0 items-center justify-end">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav id="mobileMenu" class="hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        <div class="flex flex-col p-4 space-y-2">
+          <a href="index.html"
+            class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Home</a>
+
+          <a href="#expertise"
+            class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Technical
+            Expertise</a>
+          <a href="#services"
+            class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Services</a>
+
+          <a href="projects.html"
+            class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">All Projects</a>
+          <a href="contact.html"
+            class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow">
+      <!-- About Me Section (Two Columns) - FIRST SECTION -->
+      <section id="about" class="px-4 py-16 bg-white dark:bg-gray-800/50 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <!-- Left Column: Photo + Quick Stats (35%) -->
+          <div class="lg:col-span-4 lg:order-1">
+            <div
+              class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 border border-gray-200 dark:border-gray-700 sticky top-24">
+              <!-- Profile Photo -->
+              <div class="flex flex-col items-center gap-4 pb-6 border-b border-gray-200 dark:border-gray-700">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 shadow-md border-4 border-primary/20"
+                  style='background-image: url("./assets/images/Profile Photo -JMAg.jpeg");'></div>
+                <div class="text-center">
+                  <p class="text-text-dark-gray dark:text-gray-100 text-xl font-bold">Jose Aristizabal</p>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Senior Solutions Architect</p>
+                </div>
+                <div class="flex items-center justify-start gap-6 pt-6">
+                  <a aria-label="LinkedIn Profile"
+                    class="text-text-dark-gray/60 dark:text-background-light/60 hover:text-primary dark:hover:text-primary transition-colors"
+                    href="https://linkedin.com/in/jmaristizabalg" target="_blank" rel="noopener noreferrer">
+                    <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                      </path>
+                    </svg>
+                  </a>
+                  <a aria-label="GitHub Profile"
+                    class="text-text-dark-gray/60 dark:text-background-light/60 hover:text-primary dark:hover:text-primary transition-colors"
+                    href="https://github.com/JAristizabal94" target="_blank" rel="noopener noreferrer">
+                    <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path clip-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                        fill-rule="evenodd"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Quick Info -->
+              <div class="mt-6 space-y-3">
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span>
+                  <div class="flex-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Location</p>
+                    <p class="text-sm text-text-dark-gray dark:text-gray-200">Cali, Colombia</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-accent-green text-xl mt-0.5">work</span>
+                  <div class="flex-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Availability</p>
+                    <p class="text-sm text-accent-green font-medium">Open to Remote Work</p>
+                  </div>
+                </div>
+
+
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-primary text-xl mt-0.5">code</span>
+                  <div class="flex-1">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 font-medium">Specialization</p>
+                    <p class="text-sm text-text-dark-gray dark:text-gray-200">Power Platform & D365</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA Button -->
+              <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+                <a href="contact.html"
+                  class="flex items-center justify-center gap-2 w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition-colors">
+                  <span class="material-symbols-outlined text-lg">mail</span>
+                  <span>Get in Touch</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Executive Summary (65%) -->
+          <div class="lg:col-span-8 lg:order-2">
+            <h2
+              class="text-text-dark-gray dark:text-gray-100 text-[32px] font-bold leading-tight tracking-[-0.015em] pb-6">
+              About Me</h2>
+
+            <div class="space-y-4">
+              <p class="text-text-dark-gray dark:text-gray-300 text-base font-normal leading-relaxed">
+                As a Senior Microsoft Solutions Architect, I specialize in driving digital transformation and
+                architecting robust, scalable solutions that deliver measurable business value. My focus is on bridging
+                the gap between complex technical challenges and strategic enterprise goals.
+              </p>
+              <p class="text-text-dark-gray dark:text-gray-300 text-base font-normal leading-relaxed">
+                With a proven track record of impacting over eight major organizations, my experience spans diverse
+                industries including banking, healthcare, retail, and government. This cross-industry knowledge allows
+                me to design and implement versatile solutions tailored to unique market demands and regulatory
+                landscapes.
+              </p>
+              <p class="text-text-dark-gray dark:text-gray-300 text-base font-normal leading-relaxed">
+                I am deeply focused on specialization in scalable, high-ROI solutions, technical architecture, and team
+                leadership to foster innovation and drive projects to successful completion.
+              </p>
             </div>
 
-            <!-- Mobile Menu -->
-            <nav id="mobileMenu" class="hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-                <div class="flex flex-col p-4 space-y-2">
-                    <a href="#hero" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Home</a>
-                    <a href="#about" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">About Me</a>
-                    <a href="#expertise" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Technical Expertise</a>
-                    <a href="#services" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Services</a>
-                    <a href="#experience" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Experience</a>
-                    <a href="#projects" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Projects</a>
-                    <a href="#certifications" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Certifications</a>
-                    <a href="#contact" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Contact</a>
+            <!-- Key Highlights -->
+            <div class="mt-8">
+              <h3 class="text-text-dark-gray dark:text-gray-100 text-xl font-bold pb-4">Key Highlights</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div
+                  class="flex flex-col items-center justify-center text-center p-4 bg-background-light dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                  <span class="material-symbols-outlined text-primary text-4xl mb-2">apartment</span>
+                  <p class="text-text-dark-gray dark:text-gray-100 font-bold text-lg">8+</p>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm">Organizations</p>
                 </div>
-            </nav>
-        </header>
-
-        <main class="flex-grow">
-            <!-- Hero Section -->
-            <section id="hero" class="px-4 py-12 max-w-7xl mx-auto">
-                <h1 class="text-text-dark-gray dark:text-background-light tracking-tight text-[40px] font-black leading-tight">Jose Aristizabal</h1>
-                <h2 class="text-primary text-[20px] font-bold leading-tight tracking-[-0.015em] pb-4 pt-1">
-                    Solution Architect | Technical Leadership | Enterprise Digital Transformation
-                </h2>
-                <p class="text-text-dark-gray dark:text-gray-300 text-base font-normal leading-relaxed pb-6 pt-1">
-                    5+ years architecting Dynamics 365 & Power Platform solutions for Fortune 500 companies and government organizations.
-                </p>
-
-                <div class="flex flex-col space-y-3 pt-6 pb-8">
-                    <a href="#projects" class="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors text-center">
-                        View Projects
-                    </a>
-                    <a href="#contact" class="w-full bg-transparent text-primary border-2 border-primary font-bold py-3 px-6 rounded-lg hover:bg-primary/10 transition-colors text-center">
-                        Contact Me
-                    </a>
+                <div
+                  class="flex flex-col items-center justify-center text-center p-4 bg-background-light dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                  <span class="material-symbols-outlined text-primary text-4xl mb-2">work</span>
+                  <p class="text-text-dark-gray dark:text-gray-100 font-bold text-lg">5+</p>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm">Years Experience</p>
                 </div>
-
-                <div class="flex items-center gap-3 bg-transparent py-4">
-                    <div class="text-accent-green flex items-center justify-center shrink-0 size-10">
-                        <span class="material-symbols-outlined text-3xl">public</span>
-                    </div>
-                    <p class="text-text-dark-gray dark:text-gray-300 text-base font-normal leading-normal flex-1">Cali, Colombia - Remote Work Specialist</p>
+                <div
+                  class="flex flex-col items-center justify-center text-center p-4 bg-background-light dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                  <span class="material-symbols-outlined text-primary text-4xl mb-2">globe</span>
+                  <p class="text-text-dark-gray dark:text-gray-100 font-bold text-lg">4+</p>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm">Industries</p>
                 </div>
+              </div>
+            </div>
+            <div class="mt-8">
 
-                <!-- Social Links -->
-                <div class="flex items-center justify-center gap-6 pt-6">
-                    <a aria-label="LinkedIn Profile" class="text-text-dark-gray/60 dark:text-background-light/60 hover:text-primary dark:hover:text-primary transition-colors" href="https://linkedin.com/in/jmaristizabalg" target="_blank" rel="noopener noreferrer">
-                        <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
-                        </svg>
-                    </a>
-                    <a aria-label="GitHub Profile" class="text-text-dark-gray/60 dark:text-background-light/60 hover:text-primary dark:hover:text-primary transition-colors" href="https://github.com/JAristizabal94" target="_blank" rel="noopener noreferrer">
-                        <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" fill-rule="evenodd"></path>
-                        </svg>
-                    </a>
-                </div>
-            </section>
+              <h3 class="text-text-dark-gray dark:text-gray-100 text-xl font-bold pb-4">
+                Certifications</h2>
 
-            <!-- About Me Section -->
-            <section id="about" class="px-4 py-16 bg-white dark:bg-gray-800/50 max-w-7xl mx-auto">
-                <div class="flex flex-col items-center gap-6 mb-8">
-                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCenuUZc_IwguM7DAnh6jse4eiMMNyl963mzYnnrIKAz_0QW7nA5nxmjW4HJckMniTQb8SM0Tuffamsok41xYAZSnkCsA8IA4SNUeV3nXUaWMYXuPrI5U4wLau39hqXY3kjDCQ78w2hEII2480XRFPGl_adWi06O1SRI-alhpjo2DANirHu46DLtN15-S3Q1DNB9EY-ptaz2spdjZagfuUWRNuEKLPrTRnmKdqlnUtODqOIOUCrHEKHlrpGFxqbsHvHN6CVV7FlTMbS");'></div>
-                    <div class="text-center">
-                        <p class="text-text-dark-gray dark:text-gray-100 text-[28px] font-bold leading-tight tracking-[-0.015em]">Jose Aristizabal</p>
-                        <p class="text-gray-500 dark:text-gray-400 text-lg font-normal leading-normal mt-1">Senior Microsoft Solutions Architect</p>
-                    </div>
-                </div>
-
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-8">
-                    <h3 class="text-text-dark-gray dark:text-gray-100 text-xl font-bold leading-tight tracking-[-0.015em] pb-3">Executive Summary</h3>
-                    <p class="text-text-dark-gray dark:text-gray-300 text-base font-normal leading-relaxed pb-4">
-                        As a Senior Microsoft Solutions Architect, I specialize in driving digital transformation and architecting robust, scalable solutions that deliver measurable business value. My focus is on bridging the gap between complex technical challenges and strategic enterprise goals.
-                    </p>
-                    <p class="text-text-dark-gray dark:text-gray-300 text-base font-normal leading-relaxed pb-4">
-                        With a proven track record of impacting over eight major organizations, my experience spans diverse industries including banking, healthcare, retail, and government. This cross-industry knowledge allows me to design and implement versatile solutions tailored to unique market demands and regulatory landscapes.
-                    </p>
-                    <p class="text-text-dark-gray dark:text-gray-300 text-base font-normal leading-relaxed">
-                        I am deeply focused on specialization in scalable, high-ROI solutions, technical architecture, and team leadership to foster innovation and drive projects to successful completion.
-                    </p>
-                </div>
-
-                <h3 class="text-text-dark-gray dark:text-gray-100 text-xl font-bold leading-tight tracking-[-0.015em] pb-4">Key Highlights</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div class="flex flex-col items-center justify-center text-center p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-4xl mb-2">apartment</span>
-                        <p class="text-text-dark-gray dark:text-gray-100 font-bold text-lg">8+ Organizations</p>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm">Major organizations impacted</p>
-                    </div>
-                    <div class="flex flex-col items-center justify-center text-center p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm">
-                        <span class="material-symbols-outlined text-primary text-4xl mb-2">globe</span>
-                        <p class="text-text-dark-gray dark:text-gray-100 font-bold text-lg">4+ Industries</p>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm">Cross-industry experience</p>
-                    </div>
-                    <div class="flex flex-col items-center justify-center text-center p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm">
-                        <span class="material-symbols-outlined text-accent-green text-4xl mb-2">trending_up</span>
-                        <p class="text-text-dark-gray dark:text-gray-100 font-bold text-lg">Focus on ROI</p>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm">Scalable, high-value solutions</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Technical Expertise Section -->
-            <section id="expertise" class="px-4 py-16 max-w-7xl mx-auto">
-                <h2 class="text-text-dark-gray dark:text-gray-100 text-[32px] font-bold leading-tight tracking-[-0.015em] pb-8 text-center">Technical Expertise</h2>
-
-                <!-- Microsoft Dynamics 365 -->
-                <div class="mb-8">
-                    <h3 class="text-lg font-bold leading-tight tracking-[-0.015em] pb-4 text-text-dark-gray dark:text-gray-200">Microsoft Dynamics 365</h3>
-                    <div class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3">
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">trending_up</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Sales</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">CRM Platform</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">headset_mic</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Customer Service</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Support Solutions</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">engineering</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Field Service</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Mobile Workforce</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">insights</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Customer Insights</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Data Analytics</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Power Platform -->
-                <div class="mb-8">
-                    <h3 class="text-lg font-bold leading-tight tracking-[-0.015em] pb-4 text-text-dark-gray dark:text-gray-200">Power Platform</h3>
-                    <div class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3">
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">apps</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Power Apps</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">App Development</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">account_tree</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Power Automate</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Workflow Automation</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">web</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Power Pages</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Website Builder</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">bar_chart_4_bars</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Power BI</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Business Intelligence</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">database</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Dataverse</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Data Platform</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Azure Services -->
-                <div class="mb-8">
-                    <h3 class="text-lg font-bold leading-tight tracking-[-0.015em] pb-4 text-text-dark-gray dark:text-gray-200">Azure Services</h3>
-                    <div class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3">
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">psychology</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">AI Services</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Cognitive Solutions</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">hub</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Logic Apps</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Serverless Workflows</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">dns</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Virtual Machines</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Cloud Computing</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">sync_alt</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">Integration Services</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">API Management</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Development Stack -->
-                <div>
-                    <h3 class="text-lg font-bold leading-tight tracking-[-0.015em] pb-4 text-text-dark-gray dark:text-gray-200">Development Stack</h3>
-                    <div class="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-3">
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">code</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">C# (.NET)</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Backend Logic</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">javascript</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">JavaScript</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Client-Side Scripting</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">group</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">React</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">UI Framework</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-4 transition-all hover:shadow-md hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-primary">html</span>
-                            <div class="flex flex-col gap-1">
-                                <h4 class="text-base font-bold leading-tight text-text-dark-gray dark:text-gray-100">HTML5/CSS3</h4>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Web Standards</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Services Section -->
-            <section id="services" class="px-4 py-16 bg-white dark:bg-gray-800/50 max-w-7xl mx-auto">
-                <h2 class="text-text-dark-gray dark:text-gray-100 text-[32px] font-bold leading-tight tracking-[-0.015em] pb-8 text-center">Services Offered</h2>
-
-                <div class="flex flex-col gap-4 max-w-4xl mx-auto">
-                    <details class="flex flex-col rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-[15px] py-[7px] group">
-                        <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
-                            <div class="flex items-center gap-4">
-                                <div class="text-primary flex-shrink-0">
-                                    <span class="material-symbols-outlined text-3xl">architecture</span>
-                                </div>
-                                <p class="text-text-dark-gray dark:text-gray-100 text-base font-medium leading-normal">Solution Architecture & Technical Consulting</p>
-                            </div>
-                            <div class="text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform duration-300">
-                                <span class="material-symbols-outlined">expand_more</span>
-                            </div>
-                        </summary>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal pb-3 pt-1 ml-14">
-                            Expert guidance to design and implement robust, scalable, and efficient technology solutions tailored to your business needs.
-                        </p>
-                    </details>
-
-                    <details class="flex flex-col rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-[15px] py-[7px] group">
-                        <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
-                            <div class="flex items-center gap-4">
-                                <div class="text-primary flex-shrink-0">
-                                    <span class="material-symbols-outlined text-3xl">dynamic_form</span>
-                                </div>
-                                <p class="text-text-dark-gray dark:text-gray-100 text-base font-medium leading-normal">Dynamics 365 Implementation & Migration</p>
-                            </div>
-                            <div class="text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform duration-300">
-                                <span class="material-symbols-outlined">expand_more</span>
-                            </div>
-                        </summary>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal pb-3 pt-1 ml-14">
-                            Seamless deployment and migration of Dynamics 365 to optimize your business processes and enhance customer engagement.
-                        </p>
-                    </details>
-
-                    <details class="flex flex-col rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-[15px] py-[7px] group">
-                        <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
-                            <div class="flex items-center gap-4">
-                                <div class="text-primary flex-shrink-0">
-                                    <span class="material-symbols-outlined text-3xl">power</span>
-                                </div>
-                                <p class="text-text-dark-gray dark:text-gray-100 text-base font-medium leading-normal">Power Platform Development</p>
-                            </div>
-                            <div class="text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform duration-300">
-                                <span class="material-symbols-outlined">expand_more</span>
-                            </div>
-                        </summary>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal pb-3 pt-1 ml-14">
-                            Creating custom applications, automating workflows, and building insightful dashboards with Microsoft Power Platform.
-                        </p>
-                    </details>
-
-                    <details class="flex flex-col rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-[15px] py-[7px] group">
-                        <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
-                            <div class="flex items-center gap-4">
-                                <div class="text-primary flex-shrink-0">
-                                    <span class="material-symbols-outlined text-3xl">groups</span>
-                                </div>
-                                <p class="text-text-dark-gray dark:text-gray-100 text-base font-medium leading-normal">Team Leadership & Mentoring</p>
-                            </div>
-                            <div class="text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform duration-300">
-                                <span class="material-symbols-outlined">expand_more</span>
-                            </div>
-                        </summary>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal pb-3 pt-1 ml-14">
-                            Fostering talent, guiding technical teams, and promoting a culture of excellence and continuous improvement.
-                        </p>
-                    </details>
-
-                    <details class="flex flex-col rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-[15px] py-[7px] group">
-                        <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
-                            <div class="flex items-center gap-4">
-                                <div class="text-primary flex-shrink-0">
-                                    <span class="material-symbols-outlined text-3xl">trending_up</span>
-                                </div>
-                                <p class="text-text-dark-gray dark:text-gray-100 text-base font-medium leading-normal">Digital Transformation Strategy</p>
-                            </div>
-                            <div class="text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform duration-300">
-                                <span class="material-symbols-outlined">expand_more</span>
-                            </div>
-                        </summary>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal pb-3 pt-1 ml-14">
-                            Developing strategic roadmaps to leverage technology, innovate processes, and achieve long-term business goals.
-                        </p>
-                    </details>
-                </div>
-            </section>
-
-            <!-- Professional Experience Section -->
-            <section id="experience" class="px-4 py-16 max-w-7xl mx-auto">
-                <h2 class="text-text-dark-gray dark:text-gray-100 text-[32px] font-bold leading-tight tracking-[-0.015em] pb-8 text-center">Professional Experience</h2>
-
-                <div class="relative max-w-4xl mx-auto">
-                    <!-- Vertical Timeline Line -->
-                    <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700 transform -translate-x-1/2 hidden md:block"></div>
-
-                    <!-- Timeline Entry 1 -->
-                    <div class="relative mb-12">
-                        <div class="flex items-center justify-start md:justify-center">
-                            <div class="w-full md:w-1/2 md:pr-6 flex md:justify-end">
-                                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 w-full md:max-w-sm md:text-right">
-                                    <h3 class="text-primary text-lg font-bold">Definity</h3>
-                                    <p class="text-sm font-medium text-text-dark-gray dark:text-gray-200 mt-1">Power Platform/Dynamics 365 Consultant</p>
-                                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">July 2025 - Present</p>
-                                </div>
-                            </div>
-                            <div class="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background-light dark:border-background-dark ring-2 ring-primary hidden md:block"></div>
-                            <div class="w-1/2 hidden md:block"></div>
-                        </div>
-                    </div>
-
-                    <!-- Timeline Entry 2 -->
-                    <div class="relative mb-12">
-                        <div class="flex items-center justify-start md:justify-end">
-                            <div class="w-1/2 hidden md:block"></div>
-                            <div class="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background-light dark:border-background-dark ring-2 ring-primary hidden md:block"></div>
-                            <div class="w-full md:w-1/2 md:pl-6 flex md:justify-start">
-                                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 w-full md:max-w-sm">
-                                    <h3 class="text-primary text-lg font-bold">C-ven Technologies</h3>
-                                    <p class="text-sm font-medium text-text-dark-gray dark:text-gray-200 mt-1">Business Apps Consultant</p>
-                                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">May 2022 - July 2025</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Timeline Entry 3 -->
-                    <div class="relative mb-12">
-                        <div class="flex items-center justify-start md:justify-center">
-                            <div class="w-full md:w-1/2 md:pr-6 flex md:justify-end">
-                                <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 w-full md:max-w-sm md:text-right">
-                                    <h3 class="text-primary text-lg font-bold">PartnerHelper</h3>
-                                    <p class="text-sm font-medium text-text-dark-gray dark:text-gray-200 mt-1">Pre-Sales Engineer & Sales Manager</p>
-                                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Nov 2020 - April 2022</p>
-                                </div>
-                            </div>
-                            <div class="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background-light dark:border-background-dark ring-2 ring-primary hidden md:block"></div>
-                            <div class="w-1/2 hidden md:block"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Featured Projects Section -->
-            <section id="projects" class="px-4 py-16 bg-white dark:bg-gray-800/50 max-w-7xl mx-auto">
-                <h2 class="text-text-dark-gray dark:text-gray-100 text-[32px] font-bold leading-tight tracking-[-0.015em] pb-8 text-center">Featured Projects</h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Project Card 1 -->
-                    <div class="flex flex-col rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700">
-                        <div class="flex flex-col gap-3 p-4">
-                            <p class="text-primary text-lg font-bold leading-tight tracking-[-0.015em]">Enterprise CRM Migration</p>
-                            <p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Banking & Finance</p>
-                            <div class="flex flex-wrap items-center gap-2">
-                                <div class="flex h-6 items-center justify-center rounded-full bg-primary/10 px-2.5">
-                                    <p class="text-primary text-xs font-medium leading-normal">Azure</p>
-                                </div>
-                                <div class="flex h-6 items-center justify-center rounded-full bg-primary/10 px-2.5">
-                                    <p class="text-primary text-xs font-medium leading-normal">.NET</p>
-                                </div>
-                                <div class="flex h-6 items-center justify-center rounded-full bg-primary/10 px-2.5">
-                                    <p class="text-primary text-xs font-medium leading-normal">Power Platform</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col px-4 pb-4">
-                            <details class="flex flex-col border-t border-gray-200 dark:border-gray-700 py-2 group">
-                                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
-                                    <p class="text-text-dark-gray dark:text-gray-100 text-sm font-medium leading-normal">Quantifiable Results</p>
-                                    <span class="material-symbols-outlined text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform">expand_more</span>
-                                </summary>
-                                <ul class="text-accent-green text-sm font-medium leading-normal pb-2 list-disc list-inside">
-                                    <li>30% increase in sales team productivity</li>
-                                    <li>50% reduction in system downtime</li>
-                                    <li>$1.5M annual savings in licensing costs</li>
-                                </ul>
-                            </details>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 2 -->
-                    <div class="flex flex-col rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700">
-                        <div class="flex flex-col gap-3 p-4">
-                            <p class="text-primary text-lg font-bold leading-tight tracking-[-0.015em]">AI-Powered Invoice Processing</p>
-                            <p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Healthcare</p>
-                            <div class="flex flex-wrap items-center gap-2">
-                                <div class="flex h-6 items-center justify-center rounded-full bg-primary/10 px-2.5">
-                                    <p class="text-primary text-xs font-medium leading-normal">Azure AI</p>
-                                </div>
-                                <div class="flex h-6 items-center justify-center rounded-full bg-primary/10 px-2.5">
-                                    <p class="text-primary text-xs font-medium leading-normal">Machine Learning</p>
-                                </div>
-                                <div class="flex h-6 items-center justify-center rounded-full bg-primary/10 px-2.5">
-                                    <p class="text-primary text-xs font-medium leading-normal">Logic Apps</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col px-4 pb-4">
-                            <details class="flex flex-col border-t border-gray-200 dark:border-gray-700 py-2 group" open>
-                                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
-                                    <p class="text-text-dark-gray dark:text-gray-100 text-sm font-medium leading-normal">Quantifiable Results</p>
-                                    <span class="material-symbols-outlined text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform">expand_more</span>
-                                </summary>
-                                <ul class="text-accent-green text-sm font-medium leading-normal pb-2 list-disc list-inside">
-                                    <li>40% reduction in processing time</li>
-                                    <li>25% increase in data accuracy</li>
-                                    <li>$2M annual operational cost savings</li>
-                                </ul>
-                            </details>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 3 -->
-                    <div class="flex flex-col rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700">
-                        <div class="flex flex-col gap-3 p-4">
-                            <p class="text-primary text-lg font-bold leading-tight tracking-[-0.015em]">Retail IoT & Analytics Platform</p>
-                            <p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Retail</p>
-                            <div class="flex flex-wrap items-center gap-2">
-                                <div class="flex h-6 items-center justify-center rounded-full bg-primary/10 px-2.5">
-                                    <p class="text-primary text-xs font-medium leading-normal">Azure IoT Hub</p>
-                                </div>
-                                <div class="flex h-6 items-center justify-center rounded-full bg-primary/10 px-2.5">
-                                    <p class="text-primary text-xs font-medium leading-normal">Power BI</p>
-                                </div>
-                                <div class="flex h-6 items-center justify-center rounded-full bg-primary/10 px-2.5">
-                                    <p class="text-primary text-xs font-medium leading-normal">Databricks</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex flex-col px-4 pb-4">
-                            <details class="flex flex-col border-t border-gray-200 dark:border-gray-700 py-2 group">
-                                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
-                                    <p class="text-text-dark-gray dark:text-gray-100 text-sm font-medium leading-normal">Quantifiable Results</p>
-                                    <span class="material-symbols-outlined text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform">expand_more</span>
-                                </summary>
-                                <ul class="text-accent-green text-sm font-medium leading-normal pb-2 list-disc list-inside">
-                                    <li>15% improvement in inventory accuracy</li>
-                                    <li>10% increase in in-store sales conversions</li>
-                                    <li>Optimized staff scheduling based on traffic</li>
-                                </ul>
-                            </details>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Certifications Section -->
-            <section id="certifications" class="px-4 py-16 max-w-7xl mx-auto">
-                <h2 class="text-text-dark-gray dark:text-gray-100 text-[32px] font-bold leading-tight tracking-[-0.015em] pb-8 text-center">Certifications</h2>
-
-                <div class="space-y-4 max-w-4xl mx-auto">
+                <div class="carousel-wrapper max-w-4xl mx-auto overflow-x-auto scroll-smooth scrollbar-hide">
+                  <div class="carousel-items flex gap-4">
                     <!-- Cert 1 -->
-                    <div class="flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-                        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg size-14 flex items-center justify-center flex-shrink-0">
-                            <img class="h-8 w-8 object-contain" alt="Microsoft Certified" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2fO4df1NvfRiMtabQT0x3wgYlKrfhLZhX5e85gcPCLcpi5Bn0tRHPDKAhSkKtwR4Q0DF7_yHjPGDG-MxeW2F7DXNF_TQIblnzY-CAI93R9I7HlPQ5lqgQBM1_OVlZaXqle6u7kx_UCy1UDbdt8ccPnCqKM_P2yeahb6UOVzkQg4k6WT_lTk6pa2Q3CPRSqKbi9GtW684M0lThNmFLARHpGXhIh9bMw20bolKFWSvyoNsQpcWOAxn7SH8jAXAvQgL9K9mg110o0fWV"/>
-                        </div>
-                        <div class="flex flex-col justify-center flex-grow">
-                            <p class="text-primary dark:text-blue-400 text-base font-semibold leading-normal">Power Platform Functional Consultant Associate</p>
-                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Microsoft • Expires July 2025</p>
-                        </div>
+                    <div
+                      class="carousel-item flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 min-w-[320px] flex-shrink-0">
+                      <div
+                        class="bg-gray-100 dark:bg-gray-700 rounded-lg size-14 flex items-center justify-center flex-shrink-0">
+                        <img class="h-8 w-8 object-contain" alt="Microsoft Certified"
+                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2fO4df1NvfRiMtabQT0x3wgYlKrfhLZhX5e85gcPCLcpi5Bn0tRHPDKAhSkKtwR4Q0DF7_yHjPGDG-MxeW2F7DXNF_TQIblnzY-CAI93R9I7HlPQ5lqgQBM1_OVlZaXqle6u7kx_UCy1UDbdt8ccPnCqKM_P2yeahb6UOVzkQg4k6WT_lTk6pa2Q3CPRSqKbi9GtW684M0lThNmFLARHpGXhIh9bMw20bolKFWSvyoNsQpcWOAxn7SH8jAXAvQgL9K9mg110o0fWV" />
+                      </div>
+                      <div class="flex flex-col justify-center flex-grow">
+                        <p class="text-primary dark:text-blue-400 text-base font-semibold leading-normal">Power Platform
+                          Functional Consultant Associate</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Microsoft •
+                          Expires
+                          July 2025</p>
+                      </div>
                     </div>
 
                     <!-- Cert 2 -->
-                    <div class="flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-                        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg size-14 flex items-center justify-center flex-shrink-0">
-                            <img class="h-8 w-8 object-contain" alt="Microsoft Certified" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtqOWA627i_IRguktt_F5-cTR-CwCLcWAwlGUqYxk_cH2rPBvULYogBKej_T1Exqv3TULQJQSHW3H0ng4lyrWyTRLGVT4_KT04r-BcJjiFAWKESox7NqsZr08KQkpCiZMPPPAA022p3xzkECuUzt2SXxxGX6X2ZppdTeiNaojA3hGo-t8S6_i-jXQ6WF7kOfXLYhDGHWk1BBOAdYb_4zEsmXo3d6bsCWXEDgjVH9UUWVFLtB4UnXRE4gSIklOiPhs9spG6Nt4sWe_U"/>
-                        </div>
-                        <div class="flex flex-col justify-center flex-grow">
-                            <p class="text-primary dark:text-blue-400 text-base font-semibold leading-normal">Power Platform Developer Associate</p>
-                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Microsoft • Expires April 2025</p>
-                        </div>
+                    <div
+                      class="carousel-item flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 min-w-[320px] flex-shrink-0">
+                      <div
+                        class="bg-gray-100 dark:bg-gray-700 rounded-lg size-14 flex items-center justify-center flex-shrink-0">
+                        <img class="h-8 w-8 object-contain" alt="Microsoft Certified"
+                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtqOWA627i_IRguktt_F5-cTR-CwCLcWAwlGUqYxk_cH2rPBvULYogBKej_T1Exqv3TULQJQSHW3H0ng4lyrWyTRLGVT4_KT04r-BcJjiFAWKESox7NqsZr08KQkpCiZMPPPAA022p3xzkECuUzt2SXxxGX6X2ZppdTeiNaojA3hGo-t8S6_i-jXQ6WF7kOfXLYhDGHWk1BBOAdYb_4zEsmXo3d6bsCWXEDgjVH9UUWVFLtB4UnXRE4gSIklOiPhs9spG6Nt4sWe_U" />
+                      </div>
+                      <div class="flex flex-col justify-center flex-grow">
+                        <p class="text-primary dark:text-blue-400 text-base font-semibold leading-normal">Power Platform
+                          Developer Associate</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Microsoft •
+                          Expires
+                          April 2025</p>
+                      </div>
                     </div>
 
                     <!-- Cert 3 -->
-                    <div class="flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
-                        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg size-14 flex items-center justify-center flex-shrink-0">
-                            <img class="h-8 w-8 object-contain" alt="Microsoft Certified" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcWYFyJvY59PKGH5WNoZ1wdX725H12GX-Q8Rw8ZvLbBP8btNIfuxwmkCsj3vk8k3WWhSuVUtSCxmCWhEdRLe3s9TrJcpAv1aw1mejbfKGZFblwMhQTbL6ZhWA57qx4W2dPdnoLr9u80gTcnjGQJ2ZNdDgdao_ftSsX6j8jo--g4H55v5rGZGCCBbAPQBnYCnHaiQGxTiyz43wwGhLmOcBx60tWh4O_I34pXX8WevlrQiq6ECbRvBgf9K5iB09i57-kxTwH98Nj0Y0l"/>
-                        </div>
-                        <div class="flex flex-col justify-center flex-grow">
-                            <p class="text-primary dark:text-blue-400 text-base font-semibold leading-normal">Dynamics 365 Customer Service Functional Consultant Associate</p>
-                            <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Microsoft • Expires April 2025</p>
-                        </div>
+                    <div
+                      class="carousel-item flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 min-w-[320px] flex-shrink-0">
+                      <div
+                        class="bg-gray-100 dark:bg-gray-700 rounded-lg size-14 flex items-center justify-center flex-shrink-0">
+                        <img class="h-8 w-8 object-contain" alt="Microsoft Certified"
+                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcWYFyJvY59PKGH5WNoZ1wdX725H12GX-Q8Rw8ZvLbBP8btNIfuxwmkCsj3vk8k3WWhSuVUtSCxmCWhEdRLe3s9TrJcpAv1aw1mejbfKGZFblwMhQTbL6ZhWA57qx4W2dPdnoLr9u80gTcnjGQJ2ZNdDgdao_ftSsX6j8jo--g4H55v5rGZGCCBbAPQBnYCnHaiQGxTiyz43wwGhLmOcBx60tWh4O_I34pXX8WevlrQiq6ECbRvBgf9K5iB09i57-kxTwH98Nj0Y0l" />
+                      </div>
+                      <div class="flex flex-col justify-center flex-grow">
+                        <p class="text-primary dark:text-blue-400 text-base font-semibold leading-normal">Dynamics 365
+                          Customer Service Functional Consultant Associate</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Microsoft •
+                          Expires
+                          April 2025</p>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="px-4 py-16 bg-white dark:bg-gray-800/50 max-w-7xl mx-auto">
-                <div class="max-w-md mx-auto">
-                    <!-- Availability Badge -->
-                    <div class="flex justify-center mb-8">
-                        <div class="flex h-8 items-center justify-center gap-x-2 rounded-full bg-accent-green/10 px-4 py-1">
-                            <div class="w-2 h-2 rounded-full bg-accent-green"></div>
-                            <p class="text-accent-green text-sm font-medium leading-normal">Available for Remote Projects</p>
-                        </div>
-                    </div>
-
-                    <h2 class="text-text-dark-gray dark:text-gray-100 text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 text-center">Get in Touch</h2>
-
-                    <form id="contactForm" class="space-y-4">
-                        <label class="flex flex-col min-w-40 flex-1">
-                            <p class="text-gray-600 dark:text-gray-300 text-base font-medium leading-normal pb-2">Name</p>
-                            <input name="name" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-dark-gray dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-14 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" placeholder="Enter your name" required/>
-                        </label>
-
-                        <label class="flex flex-col min-w-40 flex-1">
-                            <p class="text-gray-600 dark:text-gray-300 text-base font-medium leading-normal pb-2">Email</p>
-                            <input name="email" class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-dark-gray dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-14 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" placeholder="Enter your email address" type="email" required/>
-                        </label>
-
-                        <label class="flex flex-col min-w-40 flex-1">
-                            <p class="text-gray-600 dark:text-gray-300 text-base font-medium leading-normal pb-2">Message</p>
-                            <textarea name="message" class="form-textarea flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-dark-gray dark:text-gray-100 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 h-32 placeholder:text-gray-400 p-[15px] text-base font-normal leading-normal" placeholder="Your message here..." required></textarea>
-                        </label>
-
-                        <button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 bg-primary text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors" type="submit">Send Message</button>
-                    </form>
-
-                    <!-- Direct Contact -->
-                    <div class="mt-12">
-                        <h2 class="text-text-dark-gray dark:text-gray-100 text-[22px] font-bold leading-tight tracking-[-0.015em] pb-3 pt-5 text-center">Or Reach Me Directly</h2>
-                        <div class="space-y-3">
-                            <a class="flex items-center p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" href="mailto:jmaristizabalg@hotmail.com">
-                                <span class="material-symbols-outlined text-gray-600 dark:text-gray-300 mr-4">mail</span>
-                                <span class="text-text-dark-gray dark:text-gray-100 text-base font-medium">jmaristizabalg@hotmail.com</span>
-                            </a>
-
-                            <a class="flex items-center p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" href="tel:+573186787404">
-                                <span class="material-symbols-outlined text-gray-600 dark:text-gray-300 mr-4">call</span>
-                                <span class="text-text-dark-gray dark:text-gray-100 text-base font-medium">+57 318 678 7404</span>
-                            </a>
-
-                            <a class="flex items-center p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" href="https://linkedin.com/in/jmaristizabalg" rel="noopener noreferrer" target="_blank">
-                                <svg aria-hidden="true" class="w-6 h-6 text-gray-600 dark:text-gray-300 mr-4" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-2.13-1.82-2.13a1.91 1.91 0 00-1.68.96c-.18.33-.22.79-.22 1.25V19h-3V10h3v1.32h.04c.4-.77 1.38-1.57 3.2-1.57 3.42 0 4 2.62 4 6.02V19z"></path>
-                                </svg>
-                                <span class="text-text-dark-gray dark:text-gray-100 text-base font-medium">linkedin.com/in/jmaristizabalg</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Download CV -->
-                    <div class="mt-12">
-                        <a class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 bg-transparent text-primary border-2 border-primary gap-2 text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/10 transition-colors" href="./assets/documents/CV-JMAG.pdf" download>
-                            <span class="material-symbols-outlined">download</span>
-                            Download CV (PDF)
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-6">
-            <div class="max-w-7xl mx-auto px-4 text-center">
-                <p class="text-gray-500 dark:text-gray-400 text-sm">© 2024 Jose Aristizabal. All Rights Reserved.</p>
             </div>
-        </footer>
-    </div>
 
-    <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
+          </div>
+        </div>
+      </section>
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
 
-        // Close menu when clicking on a link
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+      <section id="combined-section" class="px-4 py-16 max-w-7xl mx-auto">
+        <h2
+          class="text-text-dark-gray dark:text-gray-100 text-[32px] font-bold leading-tight tracking-[-0.015em] pb-8 text-center">
+          Services & Expertise
+        </h2>
 
-        // Contact Form Handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-            const name = this.name.value;
-            const email = this.email.value;
-            const message = this.message.value;
+          <!-- Left Column: Services -->
+          <div>
+            <h3 class="text-lg font-bold leading-tight tracking-[-0.015em] pb-4 text-text-dark-gray dark:text-gray-200">
+              Services Offered
+            </h3>
 
-            const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            <div class="flex flex-col gap-4">
+              <details open
+                class="flex flex-col rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
+                  <div class="flex items-center gap-4">
+                    <div class="text-primary flex-shrink-0">
+                      <span class="material-symbols-outlined text-3xl">architecture</span>
+                    </div>
+                    <p class="text-text-dark-gray dark:text-gray-100 text-base font-medium leading-normal">Solution
+                      Architecture & Technical Consulting</p>
+                  </div>
+                  <div
+                    class="text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform duration-300">
+                    <span class="material-symbols-outlined">expand_more</span>
+                  </div>
+                </summary>
+                <p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal pb-3 pt-1 ml-14">
+                  Expert guidance to design and implement robust, scalable, and efficient technology solutions tailored
+                  to your business needs.
+                </p>
+              </details>
 
-            window.location.href = `mailto:jmaristizabalg@hotmail.com?subject=${subject}&body=${body}`;
-        });
-    </script>
+              <details open
+                class="flex flex-col rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
+                  <div class="flex items-center gap-4">
+                    <div class="text-primary flex-shrink-0">
+                      <span class="material-symbols-outlined text-3xl">dynamic_form</span>
+                    </div>
+                    <p class="text-text-dark-gray dark:text-gray-100 text-base font-medium leading-normal">Dynamics 365
+                      Implementation & Migration</p>
+                  </div>
+                  <div
+                    class="text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform duration-300">
+                    <span class="material-symbols-outlined">expand_more</span>
+                  </div>
+                </summary>
+                <p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal pb-3 pt-1 ml-14">
+                  Seamless deployment and migration of Dynamics 365 to optimize your business processes and enhance
+                  customer engagement.
+                </p>
+              </details>
+
+              <details open
+                class="flex flex-col rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
+                  <div class="flex items-center gap-4">
+                    <div class="text-primary flex-shrink-0">
+                      <span class="material-symbols-outlined text-3xl">power</span>
+                    </div>
+                    <p class="text-text-dark-gray dark:text-gray-100 text-base font-medium leading-normal">Power
+                      Platform Development</p>
+                  </div>
+                  <div
+                    class="text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform duration-300">
+                    <span class="material-symbols-outlined">expand_more</span>
+                  </div>
+                </summary>
+                <p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal pb-3 pt-1 ml-14">
+                  Creating custom applications, automating workflows, and building insightful dashboards with Microsoft
+                  Power Platform.
+                </p>
+              </details>
+
+              <details open
+                class="flex flex-col rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
+                  <div class="flex items-center gap-4">
+                    <div class="text-primary flex-shrink-0">
+                      <span class="material-symbols-outlined text-3xl">groups</span>
+                    </div>
+                    <p class="text-text-dark-gray dark:text-gray-100 text-base font-medium leading-normal">Team
+                      Leadership & Mentoring</p>
+                  </div>
+                  <div
+                    class="text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform duration-300">
+                    <span class="material-symbols-outlined">expand_more</span>
+                  </div>
+                </summary>
+                <p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal pb-3 pt-1 ml-14">
+                  Fostering talent, guiding technical teams, and promoting a culture of excellence and continuous
+                  improvement.
+                </p>
+              </details>
+
+              <details open
+                class="flex flex-col rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
+                  <div class="flex items-center gap-4">
+                    <div class="text-primary flex-shrink-0">
+                      <span class="material-symbols-outlined text-3xl">trending_up</span>
+                    </div>
+                    <p class="text-text-dark-gray dark:text-gray-100 text-base font-medium leading-normal">Digital
+                      Transformation Strategy</p>
+                  </div>
+                  <div
+                    class="text-text-dark-gray dark:text-gray-100 group-open:rotate-180 transition-transform duration-300">
+                    <span class="material-symbols-outlined">expand_more</span>
+                  </div>
+                </summary>
+                <p class="text-gray-600 dark:text-gray-300 text-sm font-normal leading-normal pb-3 pt-1 ml-14">
+                  Developing strategic roadmaps to leverage technology, innovate processes, and achieve long-term
+                  business goals.
+                </p>
+              </details>
+            </div>
+          </div>
+
+          <!-- Right Column: Technical Expertise -->
+          <div>
+            <h3 class="text-lg font-bold leading-tight tracking-[-0.015em] pb-4 text-text-dark-gray dark:text-gray-200">
+              Technical Expertise
+            </h3>
+
+            <!-- Microsoft Dynamics 365 -->
+            <div class="mb-6">
+              <h4 class="text-sm font-semibold leading-tight pb-3 text-text-dark-gray dark:text-gray-300">
+                Microsoft Dynamics 365
+              </h4>
+              <div class="grid grid-cols-2 gap-2">
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">trending_up</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Sales</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">headset_mic</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Customer Service</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">engineering</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Field Service</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">insights</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Customer Insights</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Power Platform -->
+            <div class="mb-6">
+              <h4 class="text-sm font-semibold leading-tight pb-3 text-text-dark-gray dark:text-gray-300">
+                Power Platform
+              </h4>
+              <div class="grid grid-cols-2 gap-2">
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">apps</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Power Apps</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">account_tree</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Power Automate</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">web</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Power Pages</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">bar_chart_4_bars</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Power BI</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">database</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Dataverse</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Azure Services -->
+            <div class="mb-6">
+              <h4 class="text-sm font-semibold leading-tight pb-3 text-text-dark-gray dark:text-gray-300">
+                Azure Services
+              </h4>
+              <div class="grid grid-cols-2 gap-2">
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">psychology</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">AI Services</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">hub</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Logic Apps</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">dns</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Virtual Machines</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">sync_alt</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">Integration Services</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Development Stack -->
+            <div>
+              <h4 class="text-sm font-semibold leading-tight pb-3 text-text-dark-gray dark:text-gray-300">
+                Development Stack
+              </h4>
+              <div class="grid grid-cols-2 gap-2">
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">code</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">C# (.NET)</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">javascript</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">JavaScript</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">group</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">React</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 p-2 transition-all hover:shadow-md">
+                  <span class="material-symbols-outlined text-primary text-xl">html</span>
+                  <span class="text-text-dark-gray dark:text-gray-100 text-sm font-medium">HTML5/CSS3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- CTA Section -->
+      <section class="px-4 py-16 bg-white dark:bg-gray-800/50 max-w-7xl mx-auto">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2
+            class="text-text-dark-gray dark:text-gray-100 text-[32px] font-bold leading-tight tracking-[-0.015em] pb-4">
+            Let's Work Together</h2>
+          <p class="text-gray-600 dark:text-gray-400 text-lg pb-8">Ready to transform your business with innovative
+            Microsoft solutions?</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html"
+              class="px-8 py-4 bg-primary text-white font-bold rounded-lg hover:bg-opacity-90 transition-colors">
+              Get in Touch
+            </a>
+            <a href="./assets/documents/CV-JMAG.pdf" download
+              class="px-8 py-4 bg-transparent text-primary border-2 border-primary font-bold rounded-lg hover:bg-primary/10 transition-colors">
+              Download CV
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-6">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-gray-500 dark:text-gray-400 text-sm">© 2024 Jose Aristizabal. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+  </script>
 </body>
+
 </html>
