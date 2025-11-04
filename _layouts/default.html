@@ -106,13 +106,17 @@
 
 <body class="bg-background-light dark:bg-background-dark font-display">
   <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-    {% include header.html %}
+    <div id="header-container"></div>
 
     <main class="flex-grow">
       {{ content }}
     </main>
+    <div id="footer-container"></div>
 
-    {% include footer.html %}
   </div>
+
+    <!-- Load Header and Footer Components -->
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
 </body>
 </html>
