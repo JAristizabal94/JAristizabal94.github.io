@@ -22,6 +22,8 @@ function loadHeader() {
         <div class="flex flex-col p-4 space-y-2">
           <a href="index.html" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Home</a>
           <a href="projects.html" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">All Projects</a>
+          <a href="./blog/index.html" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Blog</a>
+          
           <a href="contact.html" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Contact</a>
         </div>
       </nav>
