@@ -52,34 +52,7 @@
 <body class="bg-background-light dark:bg-background-dark font-display">
     <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
         <!-- Navigation Header -->
-        <header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
-            <div class="flex items-center p-4 justify-between max-w-7xl mx-auto">
-                <a href="index.html" class="flex items-center gap-3 group">
-                    <div class="w-1 h-12 bg-primary rounded-full"></div>
-                    <div>
-                        <h1 class="text-text-dark-gray dark:text-background-light text-xl font-black leading-tight group-hover:text-primary transition-colors">Jose Aristizabal</h1>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-tight">Solution Architect</p>
-                    </div>
-                </a>
-                <button id="menuBtn" aria-label="Open menu" class="text-text-dark-gray dark:text-background-light flex size-12 shrink-0 items-center justify-end">
-                    <span class="material-symbols-outlined text-3xl">menu</span>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <nav id="mobileMenu" class="hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-                <div class="flex flex-col p-4 space-y-2">
-                    <a href="index.html" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Home</a>
-                    <a href="index.html#about" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">About Me</a>
-                    <a href="index.html#expertise" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Technical Expertise</a>
-                    <a href="index.html#services" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Services</a>
-                    <a href="index.html#experience" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Experience</a>
-                    <a href="index.html#certifications" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Certifications</a>
-                    <a href="projects.html" class="py-2 px-4 bg-primary text-white rounded-lg">All Projects</a>
-                    <a href="contact.html" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Contact</a>
-                </div>
-            </nav>
-        </header>
+        <div id="header-container"></div>
 
         <main class="flex-grow">
             <!-- Hero Section -->
@@ -127,136 +100,24 @@
             <section class="px-4 pb-16 max-w-7xl mx-auto">
                 <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                    <!-- Project 1: Enterprise CRM Migration -->
-                    <div class="project-card" data-tags="dynamics,azure,net,power-platform">
+                    <!-- Project 1: Payroll Management System -->
+                    <div class="project-card" data-tags="dynamics,power-platform">
                         <div class="flex flex-col h-full rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                             <div class="flex flex-col gap-3 p-6">
                                 <div class="flex items-start justify-between">
-                                    <span class="material-symbols-outlined text-primary text-4xl">business_center</span>
-                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold rounded-full">Banking</span>
+                                    <span class="material-symbols-outlined text-primary text-4xl">payments</span>
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold rounded-full">HR Services</span>
                                 </div>
-                                <h3 class="text-primary text-xl font-bold leading-tight">Enterprise CRM Migration</h3>
+                                <div class="mb-2">
+                                    <h3 class="text-primary text-xl font-bold leading-tight">Internal Payroll Management System for HR Services Company</h3>
+                                    <p class="text-gray-500 dark:text-gray-400 text-xs font-medium mt-1">Business Process Automation Specialist</p>
+                                </div>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                                    Led the migration from legacy CRM to Dynamics 365 for a Fortune 500 banking institution, integrating with Azure services for enhanced analytics.
+                                    Designed and implemented automated payroll management system using Dynamics 365 and Power Platform. Built workflows for employee onboarding, time tracking, payroll calculations, and compliance reporting. Created employee self-service portal and integrated with external accounting systems.
                                 </p>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Azure</span>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">.NET</span>
                                     <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Dynamics 365</span>
                                     <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Power Platform</span>
-                                </div>
-                            </div>
-                            <div class="mt-auto border-t border-gray-200 dark:border-gray-700 p-6">
-                                <h4 class="text-text-dark-gray dark:text-gray-100 font-semibold text-sm mb-3">Key Results:</h4>
-                                <ul class="space-y-2 text-accent-green text-sm">
-                                    <li class="flex items-start gap-2">
-                                        <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>30% increase in sales productivity</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>50% reduction in system downtime</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>$1.5M annual cost savings</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: AI-Powered Invoice Processing -->
-                    <div class="project-card" data-tags="azure,ai-ml">
-                        <div class="flex flex-col h-full rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
-                            <div class="flex flex-col gap-3 p-6">
-                                <div class="flex items-start justify-between">
-                                    <span class="material-symbols-outlined text-primary text-4xl">psychology</span>
-                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs font-semibold rounded-full">Healthcare</span>
-                                </div>
-                                <h3 class="text-primary text-xl font-bold leading-tight">AI-Powered Invoice Processing</h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                                    Developed an automated invoice processing solution using Azure Form Recognizer and custom ML models for a major hospital network.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Azure AI</span>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Machine Learning</span>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Logic Apps</span>
-                                </div>
-                            </div>
-                            <div class="mt-auto border-t border-gray-200 dark:border-gray-700 p-6">
-                                <h4 class="text-text-dark-gray dark:text-gray-100 font-semibold text-sm mb-3">Key Results:</h4>
-                                <ul class="space-y-2 text-accent-green text-sm">
-                                    <li class="flex items-start gap-2">
-                                        <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>40% reduction in processing time</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>25% increase in data accuracy</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>$2M annual operational savings</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: Retail IoT & Analytics Platform -->
-                    <div class="project-card" data-tags="azure,power-platform">
-                        <div class="flex flex-col h-full rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
-                            <div class="flex flex-col gap-3 p-6">
-                                <div class="flex items-start justify-between">
-                                    <span class="material-symbols-outlined text-primary text-4xl">store</span>
-                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs font-semibold rounded-full">Retail</span>
-                                </div>
-                                <h3 class="text-primary text-xl font-bold leading-tight">Retail IoT & Analytics Platform</h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                                    Designed an end-to-end IoT solution with real-time sensor data collection and Power BI dashboards for a national retail chain.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Azure IoT Hub</span>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Power BI</span>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Databricks</span>
-                                </div>
-                            </div>
-                            <div class="mt-auto border-t border-gray-200 dark:border-gray-700 p-6">
-                                <h4 class="text-text-dark-gray dark:text-gray-100 font-semibold text-sm mb-3">Key Results:</h4>
-                                <ul class="space-y-2 text-accent-green text-sm">
-                                    <li class="flex items-start gap-2">
-                                        <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>15% inventory accuracy improvement</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>10% increase in sales conversions</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>Optimized staff scheduling</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4: Government Service Portal -->
-                    <div class="project-card" data-tags="power-platform,dynamics">
-                        <div class="flex flex-col h-full rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
-                            <div class="flex flex-col gap-3 p-6">
-                                <div class="flex items-start justify-between">
-                                    <span class="material-symbols-outlined text-primary text-4xl">account_balance</span>
-                                    <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 text-xs font-semibold rounded-full">Government</span>
-                                </div>
-                                <h3 class="text-primary text-xl font-bold leading-tight">Government Service Portal</h3>
-                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                                    Built a citizen-facing portal using Power Pages and Dynamics 365 to streamline government service requests and case management.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Power Pages</span>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Dynamics 365</span>
                                     <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Power Automate</span>
                                 </div>
                             </div>
@@ -265,37 +126,40 @@
                                 <ul class="space-y-2 text-accent-green text-sm">
                                     <li class="flex items-start gap-2">
                                         <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>60% faster case resolution</span>
+                                        <span>50% reduction in payroll processing time</span>
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>10,000+ citizens onboarded</span>
+                                        <span>Eliminated manual errors</span>
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>95% citizen satisfaction rate</span>
+                                        <span>Automated compliance reporting</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 5: Field Service Optimization -->
-                    <div class="project-card" data-tags="dynamics,power-platform,azure">
+                    <!-- Project 2: Hotel Reservation System Migration -->
+                    <div class="project-card" data-tags="power-platform">
                         <div class="flex flex-col h-full rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                             <div class="flex flex-col gap-3 p-6">
                                 <div class="flex items-start justify-between">
-                                    <span class="material-symbols-outlined text-primary text-4xl">engineering</span>
-                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 text-xs font-semibold rounded-full">Manufacturing</span>
+                                    <span class="material-symbols-outlined text-primary text-4xl">hotel</span>
+                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs font-semibold rounded-full">Hospitality</span>
                                 </div>
-                                <h3 class="text-primary text-xl font-bold leading-tight">Field Service Optimization</h3>
+                                <div class="mb-2">
+                                    <h3 class="text-primary text-xl font-bold leading-tight">Legacy Reservation System Migration to Power Platform</h3>
+                                    <p class="text-gray-500 dark:text-gray-400 text-xs font-medium mt-1">Migration Architect & Technical Lead</p>
+                                </div>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                                    Implemented Dynamics 365 Field Service with AI-powered scheduling and mobile workforce management for a manufacturing company.
+                                    Migrated complete in-house hotel reservation system to Power Platform. Developed Model-driven app for reservation management and Power Pages customer portal. Integrated payment processing, room availability tracking, and guest communication workflows.
                                 </p>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Field Service</span>
                                     <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Power Apps</span>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Azure Maps</span>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Power Pages</span>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Power BI</span>
                                 </div>
                             </div>
                             <div class="mt-auto border-t border-gray-200 dark:border-gray-700 p-6">
@@ -303,37 +167,39 @@
                                 <ul class="space-y-2 text-accent-green text-sm">
                                     <li class="flex items-start gap-2">
                                         <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>35% improvement in first-time fix rate</span>
+                                        <span>10+ years data migrated with zero downtime</span>
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>20% reduction in travel time</span>
+                                        <span>70% reduction in maintenance costs</span>
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>Increased customer satisfaction</span>
+                                        <span>Real-time occupancy monitoring</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 6: Custom Integration Platform -->
-                    <div class="project-card" data-tags="azure,net">
+                    <!-- Project 3: Insurance Customer Service Platform -->
+                    <div class="project-card" data-tags="dynamics,power-platform">
                         <div class="flex flex-col h-full rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
                             <div class="flex flex-col gap-3 p-6">
                                 <div class="flex items-start justify-between">
-                                    <span class="material-symbols-outlined text-primary text-4xl">hub</span>
-                                    <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-xs font-semibold rounded-full">Enterprise</span>
+                                    <span class="material-symbols-outlined text-primary text-4xl">shield</span>
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs font-semibold rounded-full">Insurance</span>
                                 </div>
-                                <h3 class="text-primary text-xl font-bold leading-tight">Custom Integration Platform</h3>
+                                <div class="mb-2">
+                                    <h3 class="text-primary text-xl font-bold leading-tight">Insurance Customer Service Platform with Self-Service Claims Portal</h3>
+                                </div>
                                 <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                                    Architected a microservices-based integration platform using Azure API Management and .NET Core to connect disparate enterprise systems.
+                                    Implemented integrated Dynamics 365 Customer Service and Sales platform. Developed self-service portal using Power Pages where policyholders can submit claims, upload documents, and track status in real-time. Built automated claim routing workflows and approval processes.
                                 </p>
                                 <div class="flex flex-wrap gap-2 mt-2">
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Azure API Mgmt</span>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">.NET Core</span>
-                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Microservices</span>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Dynamics 365</span>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Power Pages</span>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Power Automate</span>
                                 </div>
                             </div>
                             <div class="mt-auto border-t border-gray-200 dark:border-gray-700 p-6">
@@ -341,15 +207,135 @@
                                 <ul class="space-y-2 text-accent-green text-sm">
                                     <li class="flex items-start gap-2">
                                         <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>99.9% uptime achieved</span>
+                                        <span>60% reduction in claim processing time</span>
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>Integrated 15+ legacy systems</span>
+                                        <span>Improved customer satisfaction scores</span>
                                     </li>
                                     <li class="flex items-start gap-2">
                                         <span class="material-symbols-outlined text-lg">check_circle</span>
-                                        <span>Real-time data synchronization</span>
+                                        <span>Mobile-responsive with digital signature</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Automotive Dealership Sales System -->
+                    <div class="project-card" data-tags="dynamics">
+                        <div class="flex flex-col h-full rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                            <div class="flex flex-col gap-3 p-6">
+                                <div class="flex items-start justify-between">
+                                    <span class="material-symbols-outlined text-primary text-4xl">directions_car</span>
+                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 text-xs font-semibold rounded-full">Automotive</span>
+                                </div>
+                                <div class="mb-2">
+                                    <h3 class="text-primary text-xl font-bold leading-tight">Complete Dynamics 365 Sales Implementation for Automotive Dealership</h3>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                    Led end-to-end Dynamics 365 Sales implementation for automotive dealership network. Developed integrated partner portal enabling commercial partners to register vehicle sales directly into CRM. Built automated workflows for lead management, sales tracking, and commission calculations.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Dynamics 365 Sales</span>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Partner Portal</span>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Power BI</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto border-t border-gray-200 dark:border-gray-700 p-6">
+                                <h4 class="text-text-dark-gray dark:text-gray-100 font-semibold text-sm mb-3">Key Results:</h4>
+                                <ul class="space-y-2 text-accent-green text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-lg">check_circle</span>
+                                        <span>Streamlined sales across dealer network</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-lg">check_circle</span>
+                                        <span>Improved partner collaboration</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-lg">check_circle</span>
+                                        <span>Automated commission calculations</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Government Banking Regulator -->
+                    <div class="project-card" data-tags="dynamics">
+                        <div class="flex flex-col h-full rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                            <div class="flex flex-col gap-3 p-6">
+                                <div class="flex items-start justify-between">
+                                    <span class="material-symbols-outlined text-primary text-4xl">account_balance</span>
+                                    <span class="px-3 py-1 bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 text-xs font-semibold rounded-full">Government</span>
+                                </div>
+                                <div class="mb-2">
+                                    <h3 class="text-primary text-xl font-bold leading-tight">Multi-Tier Government Customer Service System - Banking Regulator</h3>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                    Architected comprehensive citizen service platform. Implemented Dynamics 365 Customer Service with complex multi-tier case routing, automated escalation workflows, and granular assignment models. System handles citizen complaints, regulatory inquiries, and banking supervision cases.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Dynamics 365</span>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Customer Service</span>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">SLA Management</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto border-t border-gray-200 dark:border-gray-700 p-6">
+                                <h4 class="text-text-dark-gray dark:text-gray-100 font-semibold text-sm mb-3">Key Results:</h4>
+                                <ul class="space-y-2 text-accent-green text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-lg">check_circle</span>
+                                        <span>Multi-tier case routing & escalation</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-lg">check_circle</span>
+                                        <span>Automated case categorization</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-lg">check_circle</span>
+                                        <span>Executive dashboards & reporting</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Pharmacy Invoice Scanning -->
+                    <div class="project-card" data-tags="azure,ai-ml,power-platform">
+                        <div class="flex flex-col h-full rounded-xl bg-white dark:bg-gray-800 shadow-sm overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                            <div class="flex flex-col gap-3 p-6">
+                                <div class="flex items-start justify-between">
+                                    <span class="material-symbols-outlined text-primary text-4xl">psychology</span>
+                                    <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 text-xs font-semibold rounded-full">Pharmaceutical</span>
+                                </div>
+                                <div class="mb-2">
+                                    <h3 class="text-primary text-xl font-bold leading-tight">Pharmacy Invoice Scanning & Incentive Automation with Azure AI</h3>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                    Developed automated pharmacy invoice processing system using Azure AI Document Intelligence and Power Apps. Solution scans invoices, extracts data, calculates incentives automatically, and tracks pharmacy performance metrics. Handles 5,000+ invoices monthly.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Azure AI</span>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Power Apps</span>
+                                    <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">Document Intelligence</span>
+                                </div>
+                            </div>
+                            <div class="mt-auto border-t border-gray-200 dark:border-gray-700 p-6">
+                                <h4 class="text-text-dark-gray dark:text-gray-100 font-semibold text-sm mb-3">Key Results:</h4>
+                                <ul class="space-y-2 text-accent-green text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-lg">check_circle</span>
+                                        <span>80% reduction in processing time</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-lg">check_circle</span>
+                                        <span>Eliminated data entry errors</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="material-symbols-outlined text-lg">check_circle</span>
+                                        <span>5,000+ invoices processed monthly</span>
                                     </li>
                                 </ul>
                             </div>
@@ -381,29 +367,15 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-6">
-            <div class="max-w-7xl mx-auto px-4 text-center">
-                <p class="text-gray-500 dark:text-gray-400 text-sm">© 2024 Jose Aristizabal. All Rights Reserved.</p>
-            </div>
-        </footer>
+        <div id="footer-container"></div>
     </div>
 
+    <!-- Load Header and Footer Components -->
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+
+    <!-- Project Filtering Script -->
     <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
         // Project Filtering
         function filterProjects(category) {
             const cards = document.querySelectorAll('.project-card');

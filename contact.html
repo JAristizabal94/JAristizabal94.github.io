@@ -46,34 +46,7 @@
 <body class="bg-background-light dark:bg-background-dark font-display">
     <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
         <!-- Navigation Header -->
-        <header class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
-            <div class="flex items-center p-4 justify-between max-w-7xl mx-auto">
-                <a href="index.html" class="flex items-center gap-3 group">
-                    <div class="w-1 h-12 bg-primary rounded-full"></div>
-                    <div>
-                        <h1 class="text-text-dark-gray dark:text-background-light text-xl font-black leading-tight group-hover:text-primary transition-colors">Jose Aristizabal</h1>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm leading-tight">Solution Architect</p>
-                    </div>
-                </a>
-                <button id="menuBtn" aria-label="Open menu" class="text-text-dark-gray dark:text-background-light flex size-12 shrink-0 items-center justify-end">
-                    <span class="material-symbols-outlined text-3xl">menu</span>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <nav id="mobileMenu" class="hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-                <div class="flex flex-col p-4 space-y-2">
-                    <a href="index.html" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Home</a>
-                    <a href="index.html#about" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">About Me</a>
-                    <a href="index.html#expertise" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Technical Expertise</a>
-                    <a href="index.html#services" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Services</a>
-                    <a href="index.html#experience" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Experience</a>
-                    <a href="index.html#certifications" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Certifications</a>
-                    <a href="projects.html" class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">All Projects</a>
-                    <a href="contact.html" class="py-2 px-4 bg-primary text-white rounded-lg">Contact</a>
-                </div>
-            </nav>
-        </header>
+        <div id="header-container"></div>
 
         <main class="flex-grow">
             <!-- Hero Section -->
@@ -331,28 +304,14 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-6">
-            <div class="max-w-7xl mx-auto px-4 text-center">
-                <p class="text-gray-500 dark:text-gray-400 text-sm">© 2024 Jose Aristizabal. All Rights Reserved.</p>
-            </div>
-        </footer>
+        <div id="footer-container"></div>
     </div>
 
+    <!-- Load Header and Footer Components -->
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+
     <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close menu when clicking on a link
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
 
         // Contact Form Handler with Formspree
         const form = document.getElementById('contactForm');

@@ -49,43 +49,7 @@
 <body class="bg-background-light dark:bg-background-dark font-display">
   <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
     <!-- Navigation Header -->
-    <header
-      class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
-      <div class="flex items-center p-4 justify-between max-w-7xl mx-auto">
-        <a href="index.html" class="flex items-center gap-3 group">
-          <div class="w-1 h-12 bg-primary rounded-full"></div>
-          <div>
-            <h1
-              class="text-text-dark-gray dark:text-background-light text-xl font-black leading-tight group-hover:text-primary transition-colors">
-              Jose Aristizabal</h1>
-            <p class="text-gray-600 dark:text-gray-400 text-sm leading-tight">Solution Architect</p>
-          </div>
-        </a>
-        <button id="menuBtn" aria-label="Open menu"
-          class="text-text-dark-gray dark:text-background-light flex size-12 shrink-0 items-center justify-end">
-          <span class="material-symbols-outlined text-3xl">menu</span>
-        </button>
-      </div>
-
-      <!-- Mobile Menu -->
-      <nav id="mobileMenu" class="hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-        <div class="flex flex-col p-4 space-y-2">
-          <a href="index.html"
-            class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Home</a>
-
-          <a href="#expertise"
-            class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Technical
-            Expertise</a>
-          <a href="#services"
-            class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Services</a>
-
-          <a href="projects.html"
-            class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">All Projects</a>
-          <a href="contact.html"
-            class="py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">Contact</a>
-        </div>
-      </nav>
-    </header>
+    <div id="header-container"></div>
 
     <main class="flex-grow">
       <!-- About Me Section (Two Columns) - FIRST SECTION -->
@@ -102,7 +66,8 @@
                   style='background-image: url("./assets/images/Profile Photo -JMAg.jpeg");'></div>
                 <div class="text-center">
                   <p class="text-text-dark-gray dark:text-gray-100 text-xl font-bold">Jose Aristizabal</p>
-                  <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Senior Solutions Architect</p>
+                  <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Solution Architecture | Technical Leadership | Pre-Sales Engineering | Cross-
+Industry Consulting | Azure AI Integration | Enterprise Digital Transformation</p>
                 </div>
                 <div class="flex items-center justify-start gap-6 pt-6">
                   <a aria-label="LinkedIn Profile"
@@ -173,19 +138,13 @@
 
             <div class="space-y-4">
               <p class="text-text-dark-gray dark:text-gray-300 text-base font-normal leading-relaxed">
-                As a Senior Microsoft Solutions Architect, I specialize in driving digital transformation and
-                architecting robust, scalable solutions that deliver measurable business value. My focus is on bridging
-                the gap between complex technical challenges and strategic enterprise goals.
+                Senior Microsoft Solutions Architect with <strong class="font-bold">5+ years</strong> leading end-to-end Dynamics 365 and Power Platform implementations across <strong class="font-bold">banking, healthcare, retail, and government sectors.</strong> Proven track record of architecting enterprise-grade solutions for <strong class="font-bold">8+ major organizations,</strong> managing technical teams, and driving digital transformation initiatives from requirements gathering to deployment.
               </p>
               <p class="text-text-dark-gray dark:text-gray-300 text-base font-normal leading-relaxed">
-                With a proven track record of impacting over eight major organizations, my experience spans diverse
-                industries including banking, healthcare, retail, and government. This cross-industry knowledge allows
-                me to design and implement versatile solutions tailored to unique market demands and regulatory
-                landscapes.
+                Throughout these implementations, I've developed sophisticated solutions including <strong class="font-bold">Dynamics 365 Sales and Customer Service deployments, complex approval workflows with multi-tier escalation processes, Azure AI Document Intelligence integration</strong> for automated invoice processing, and <strong class="font-bold">Power Pages portals</strong> featuring custom authentication and role-based access controls. My development approach leverages Power Platform components including <strong class="font-bold">custom PCF controls</strong> for enhanced user experiences, <strong class="font-bold">C# plugins and custom workflow activities</strong> for advanced business logic automation, <strong class="font-bold">Power Automate flows</strong> with complex conditional branching, <strong class="font-bold">Dynamics 365 Customer Insights</strong> for customer analytics, and <strong class="font-bold">chatbot implementations</strong> for automated customer service.
               </p>
               <p class="text-text-dark-gray dark:text-gray-300 text-base font-normal leading-relaxed">
-                I am deeply focused on specialization in scalable, high-ROI solutions, technical architecture, and team
-                leadership to foster innovation and drive projects to successful completion.
+                My approach involves comprehensive analysis of client needs to design <strong class="font-bold">scalable solutions that maximize business value and long-term ROI.</strong> In this pursuit of delivering optimal outcomes, I've successfully implemented <strong class="font-bold">complete Dynamics 365 ecosystems, Power Pages portals</strong> for customer self-service, <strong class="font-bold">mobile app integrations</strong> for field operations, <strong class="font-bold">custom connectors</strong> for seamless third-party system integration, and <strong class="font-bold">end-to-end digital transformation projects</strong> spanning <strong class="font-bold">CRM migrations, automated workflow implementations,</strong> and <strong class="font-bold">government citizen service platforms.</strong>
               </p>
             </div>
 
@@ -213,65 +172,94 @@
                 </div>
               </div>
             </div>
+            <!-- Certifications -->
             <div class="mt-8">
+              <h3 class="text-text-dark-gray dark:text-gray-100 text-xl font-bold pb-4">Certifications</h3>
 
-              <h3 class="text-text-dark-gray dark:text-gray-100 text-xl font-bold pb-4">
-                Certifications</h2>
-
-                <div class="carousel-wrapper max-w-4xl mx-auto overflow-x-auto scroll-smooth scrollbar-hide">
-                  <div class="carousel-items flex gap-4">
-                    <!-- Cert 1 -->
-                    <div
-                      class="carousel-item flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 min-w-[320px] flex-shrink-0">
-                      <div
-                        class="bg-gray-100 dark:bg-gray-700 rounded-lg size-14 flex items-center justify-center flex-shrink-0">
-                        <img class="h-8 w-8 object-contain" alt="Microsoft Certified"
-                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2fO4df1NvfRiMtabQT0x3wgYlKrfhLZhX5e85gcPCLcpi5Bn0tRHPDKAhSkKtwR4Q0DF7_yHjPGDG-MxeW2F7DXNF_TQIblnzY-CAI93R9I7HlPQ5lqgQBM1_OVlZaXqle6u7kx_UCy1UDbdt8ccPnCqKM_P2yeahb6UOVzkQg4k6WT_lTk6pa2Q3CPRSqKbi9GtW684M0lThNmFLARHpGXhIh9bMw20bolKFWSvyoNsQpcWOAxn7SH8jAXAvQgL9K9mg110o0fWV" />
-                      </div>
-                      <div class="flex flex-col justify-center flex-grow">
-                        <p class="text-primary dark:text-blue-400 text-base font-semibold leading-normal">Power Platform
-                          Functional Consultant Associate</p>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Microsoft •
-                          Expires
-                          July 2025</p>
-                      </div>
-                    </div>
-
-                    <!-- Cert 2 -->
-                    <div
-                      class="carousel-item flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 min-w-[320px] flex-shrink-0">
-                      <div
-                        class="bg-gray-100 dark:bg-gray-700 rounded-lg size-14 flex items-center justify-center flex-shrink-0">
-                        <img class="h-8 w-8 object-contain" alt="Microsoft Certified"
-                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtqOWA627i_IRguktt_F5-cTR-CwCLcWAwlGUqYxk_cH2rPBvULYogBKej_T1Exqv3TULQJQSHW3H0ng4lyrWyTRLGVT4_KT04r-BcJjiFAWKESox7NqsZr08KQkpCiZMPPPAA022p3xzkECuUzt2SXxxGX6X2ZppdTeiNaojA3hGo-t8S6_i-jXQ6WF7kOfXLYhDGHWk1BBOAdYb_4zEsmXo3d6bsCWXEDgjVH9UUWVFLtB4UnXRE4gSIklOiPhs9spG6Nt4sWe_U" />
-                      </div>
-                      <div class="flex flex-col justify-center flex-grow">
-                        <p class="text-primary dark:text-blue-400 text-base font-semibold leading-normal">Power Platform
-                          Developer Associate</p>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Microsoft •
-                          Expires
-                          April 2025</p>
-                      </div>
-                    </div>
-
-                    <!-- Cert 3 -->
-                    <div
-                      class="carousel-item flex items-center gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 min-w-[320px] flex-shrink-0">
-                      <div
-                        class="bg-gray-100 dark:bg-gray-700 rounded-lg size-14 flex items-center justify-center flex-shrink-0">
-                        <img class="h-8 w-8 object-contain" alt="Microsoft Certified"
-                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcWYFyJvY59PKGH5WNoZ1wdX725H12GX-Q8Rw8ZvLbBP8btNIfuxwmkCsj3vk8k3WWhSuVUtSCxmCWhEdRLe3s9TrJcpAv1aw1mejbfKGZFblwMhQTbL6ZhWA57qx4W2dPdnoLr9u80gTcnjGQJ2ZNdDgdao_ftSsX6j8jo--g4H55v5rGZGCCBbAPQBnYCnHaiQGxTiyz43wwGhLmOcBx60tWh4O_I34pXX8WevlrQiq6ECbRvBgf9K5iB09i57-kxTwH98Nj0Y0l" />
-                      </div>
-                      <div class="flex flex-col justify-center flex-grow">
-                        <p class="text-primary dark:text-blue-400 text-base font-semibold leading-normal">Dynamics 365
-                          Customer Service Functional Consultant Associate</p>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Microsoft •
-                          Expires
-                          April 2025</p>
-                      </div>
-                    </div>
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                <!-- Cert 1 -->
+                <a href="https://learn.microsoft.com/api/credentials/share/en-us/JoseManuelAristizabalGonzalez-4505/A059F09999700F3D?sharingId=D856110A425E4029"
+                   target="_blank" rel="noopener noreferrer"
+                   class="group flex items-start gap-3 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all hover:shadow-md">
+                  <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg size-12 flex items-center justify-center flex-shrink-0">
+                    <img class="h-7 w-7 object-contain" alt="Microsoft Certified"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2fO4df1NvfRiMtabQT0x3wgYlKrfhLZhX5e85gcPCLcpi5Bn0tRHPDKAhSkKtwR4Q0DF7_yHjPGDG-MxeW2F7DXNF_TQIblnzY-CAI93R9I7HlPQ5lqgQBM1_OVlZaXqle6u7kx_UCy1UDbdt8ccPnCqKM_P2yeahb6UOVzkQg4k6WT_lTk6pa2Q3CPRSqKbi9GtW684M0lThNmFLARHpGXhIh9bMw20bolKFWSvyoNsQpcWOAxn7SH8jAXAvQgL9K9mg110o0fWV" />
                   </div>
-                </div>
+                  <div class="flex flex-col justify-center flex-grow min-w-0">
+                    <p class="text-primary dark:text-blue-400 text-sm font-semibold leading-snug group-hover:underline">
+                      Power Platform Functional Consultant Associate
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs font-normal mt-1">Microsoft</p>
+                  </div>
+                  <span class="material-symbols-outlined text-lg text-gray-400 dark:text-gray-500 group-hover:text-primary dark:group-hover:text-primary transition-colors flex-shrink-0">open_in_new</span>
+                </a>
+
+                <!-- Cert 2 -->
+                <a href="https://learn.microsoft.com/api/credentials/share/en-us/JoseManuelAristizabalGonzalez-4505/95E24FB6A5EE1BA2?sharingId=D856110A425E4029"
+                   target="_blank" rel="noopener noreferrer"
+                   class="group flex items-start gap-3 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all hover:shadow-md">
+                  <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg size-12 flex items-center justify-center flex-shrink-0">
+                    <img class="h-7 w-7 object-contain" alt="Microsoft Certified"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtqOWA627i_IRguktt_F5-cTR-CwCLcWAwlGUqYxk_cH2rPBvULYogBKej_T1Exqv3TULQJQSHW3H0ng4lyrWyTRLGVT4_KT04r-BcJjiFAWKESox7NqsZr08KQkpCiZMPPPAA022p3xzkECuUzt2SXxxGX6X2ZppdTeiNaojA3hGo-t8S6_i-jXQ6WF7kOfXLYhDGHWk1BBOAdYb_4zEsmXo3d6bsCWXEDgjVH9UUWVFLtB4UnXRE4gSIklOiPhs9spG6Nt4sWe_U" />
+                  </div>
+                  <div class="flex flex-col justify-center flex-grow min-w-0">
+                    <p class="text-primary dark:text-blue-400 text-sm font-semibold leading-snug group-hover:underline">
+                      Power Platform Developer Associate
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs font-normal mt-1">Microsoft</p>
+                  </div>
+                  <span class="material-symbols-outlined text-lg text-gray-400 dark:text-gray-500 group-hover:text-primary dark:group-hover:text-primary transition-colors flex-shrink-0">open_in_new</span>
+                </a>
+
+                <!-- Cert 3 -->
+                <a href="https://learn.microsoft.com/api/credentials/share/en-us/JoseManuelAristizabalGonzalez-4505/C349DCC194ED7DD?sharingId=D856110A425E4029"
+                   target="_blank" rel="noopener noreferrer"
+                   class="group flex items-start gap-3 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all hover:shadow-md">
+                  <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg size-12 flex items-center justify-center flex-shrink-0">
+                    <img class="h-7 w-7 object-contain" alt="Microsoft Certified"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcWYFyJvY59PKGH5WNoZ1wdX725H12GX-Q8Rw8ZvLbBP8btNIfuxwmkCsj3vk8k3WWhSuVUtSCxmCWhEdRLe3s9TrJcpAv1aw1mejbfKGZFblwMhQTbL6ZhWA57qx4W2dPdnoLr9u80gTcnjGQJ2ZNdDgdao_ftSsX6j8jo--g4H55v5rGZGCCBbAPQBnYCnHaiQGxTiyz43wwGhLmOcBx60tWh4O_I34pXX8WevlrQiq6ECbRvBgf9K5iB09i57-kxTwH98Nj0Y0l" />
+                  </div>
+                  <div class="flex flex-col justify-center flex-grow min-w-0">
+                    <p class="text-primary dark:text-blue-400 text-sm font-semibold leading-snug group-hover:underline">
+                      Dynamics 365 Customer Service Functional Consultant Associate
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs font-normal mt-1">Microsoft</p>
+                  </div>
+                  <span class="material-symbols-outlined text-lg text-gray-400 dark:text-gray-500 group-hover:text-primary dark:group-hover:text-primary transition-colors flex-shrink-0">open_in_new</span>
+                </a>
+
+                <!-- Cert 4 -->
+                <a href="https://coursera.org/share/6869341e2a21530919edf60fc9f01ad3"
+                   target="_blank" rel="noopener noreferrer"
+                   class="group flex items-start gap-3 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all hover:shadow-md">
+                  <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg size-12 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-2xl">school</span>
+                  </div>
+                  <div class="flex flex-col justify-center flex-grow min-w-0">
+                    <p class="text-primary dark:text-blue-400 text-sm font-semibold leading-snug group-hover:underline">
+                      Artificial Intelligence on Microsoft Azure
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs font-normal mt-1">Coursera</p>
+                  </div>
+                  <span class="material-symbols-outlined text-lg text-gray-400 dark:text-gray-500 group-hover:text-primary dark:group-hover:text-primary transition-colors flex-shrink-0">open_in_new</span>
+                </a>
+
+                <!-- Cert 5 -->
+                <a href="https://coursera.org/share/d7239f4c7797d11ea96fd9735b7c77ca"
+                   target="_blank" rel="noopener noreferrer"
+                   class="group flex items-start gap-3 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all hover:shadow-md">
+                  <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg size-12 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-2xl">school</span>
+                  </div>
+                  <div class="flex flex-col justify-center flex-grow min-w-0">
+                    <p class="text-primary dark:text-blue-400 text-sm font-semibold leading-snug group-hover:underline">
+                      Microsoft Azure Machine Learning
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs font-normal mt-1">Coursera</p>
+                  </div>
+                  <span class="material-symbols-outlined text-lg text-gray-400 dark:text-gray-500 group-hover:text-primary dark:group-hover:text-primary transition-colors flex-shrink-0">open_in_new</span>
+                </a>
+              </div>
             </div>
 
           </div>
@@ -560,30 +548,13 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 py-6">
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <p class="text-gray-500 dark:text-gray-400 text-sm">© 2024 Jose Aristizabal. All Rights Reserved.</p>
-      </div>
-    </footer>
+    <div id="footer-container"></div>
   </div>
 
-  <script>
-    // Mobile Menu Toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close menu when clicking on a link
-    document.querySelectorAll('#mobileMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-
-  </script>
+  <!-- Load Header and Footer Components -->
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
 </body>
 
 </html>
+
