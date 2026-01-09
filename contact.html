@@ -65,9 +65,9 @@
 
             <!-- Contact Content -->
             <section class="px-4 py-8 max-w-6xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <!-- Contact Form -->
-                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8 border border-gray-200 dark:border-gray-700">
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- Contact Form - TEMPORARILY HIDDEN -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8 border border-gray-200 dark:border-gray-700" style="display: none;">
                         <h2 class="text-text-dark-gray dark:text-gray-100 text-2xl font-bold pb-6">Send a Message</h2>
 
                         <form id="contactForm" action="https://formspree.io/f/mdkprlld" method="POST" class="space-y-6">
@@ -167,52 +167,52 @@
                     </div>
 
                     <!-- Contact Information -->
-                    <div class="space-y-6">
+                    <div>
                         <!-- Direct Contact -->
                         <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8 border border-gray-200 dark:border-gray-700">
-                            <h2 class="text-text-dark-gray dark:text-gray-100 text-2xl font-bold pb-6">Contact Information</h2>
+                            <h2 class="text-text-dark-gray dark:text-gray-100 text-2xl font-bold pb-6 text-center">Contact Information</h2>
 
-                            <div class="space-y-4">
-                                <a href="mailto:jmaristizabalg@hotmail.com" class="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group">
-                                    <div class="text-primary bg-primary/10 p-3 rounded-lg">
-                                        <span class="material-symbols-outlined text-2xl">mail</span>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                <a href="mailto:jmaristizabalg@hotmail.com" class="flex flex-col items-center text-center gap-3 p-6 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group border border-gray-200 dark:border-gray-700">
+                                    <div class="text-primary bg-primary/10 p-4 rounded-lg">
+                                        <span class="material-symbols-outlined text-3xl">mail</span>
                                     </div>
-                                    <div class="flex-1">
-                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">Email</p>
-                                        <p class="text-text-dark-gray dark:text-gray-100 font-medium group-hover:text-primary transition-colors">jmaristizabalg@hotmail.com</p>
+                                    <div>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium mb-1">Email</p>
+                                        <p class="text-text-dark-gray dark:text-gray-100 font-medium group-hover:text-primary transition-colors text-sm">jmaristizabalg@hotmail.com</p>
                                     </div>
                                 </a>
 
-                                <a href="tel:+573186787404" class="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group">
-                                    <div class="text-primary bg-primary/10 p-3 rounded-lg">
-                                        <span class="material-symbols-outlined text-2xl">call</span>
+                                <a href="tel:+573186787404" class="flex flex-col items-center text-center gap-3 p-6 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group border border-gray-200 dark:border-gray-700">
+                                    <div class="text-primary bg-primary/10 p-4 rounded-lg">
+                                        <span class="material-symbols-outlined text-3xl">call</span>
                                     </div>
-                                    <div class="flex-1">
-                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">Phone</p>
+                                    <div>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium mb-1">Phone</p>
                                         <p class="text-text-dark-gray dark:text-gray-100 font-medium group-hover:text-primary transition-colors">+57 318 678 7404</p>
                                     </div>
                                 </a>
 
-                                <a href="https://linkedin.com/in/jmaristizabalg" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group">
-                                    <div class="text-primary bg-primary/10 p-3 rounded-lg">
-                                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <a href="https://linkedin.com/in/jmaristizabalg" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center text-center gap-3 p-6 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors group border border-gray-200 dark:border-gray-700">
+                                    <div class="text-primary bg-primary/10 p-4 rounded-lg">
+                                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
                                             <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-2.13-1.82-2.13a1.91 1.91 0 00-1.68.96c-.18.33-.22.79-.22 1.25V19h-3V10h3v1.32h.04c.4-.77 1.38-1.57 3.2-1.57 3.42 0 4 2.62 4 6.02V19z"></path>
                                         </svg>
                                     </div>
-                                    <div class="flex-1">
-                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">LinkedIn</p>
-                                        <p class="text-text-dark-gray dark:text-gray-100 font-medium group-hover:text-primary transition-colors">linkedin.com/in/jmaristizabalg</p>
+                                    <div>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium mb-1">LinkedIn</p>
+                                        <p class="text-text-dark-gray dark:text-gray-100 font-medium group-hover:text-primary transition-colors text-sm">jmaristizabalg</p>
                                     </div>
                                 </a>
 
-                                <div class="flex items-start gap-4 p-4 rounded-lg">
-                                    <div class="text-accent-green bg-accent-green/10 p-3 rounded-lg">
-                                        <span class="material-symbols-outlined text-2xl">location_on</span>
+                                <div class="flex flex-col items-center text-center gap-3 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
+                                    <div class="text-accent-green bg-accent-green/10 p-4 rounded-lg">
+                                        <span class="material-symbols-outlined text-3xl">location_on</span>
                                     </div>
-                                    <div class="flex-1">
-                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium">Location</p>
+                                    <div>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400 font-medium mb-1">Location</p>
                                         <p class="text-text-dark-gray dark:text-gray-100 font-medium">Cali, Colombia</p>
-                                        <p class="text-sm text-gray-500 dark:text-gray-400">Open to remote work worldwide</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Remote work worldwide</p>
                                     </div>
                                 </div>
                             </div>
